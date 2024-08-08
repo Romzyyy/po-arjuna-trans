@@ -1,125 +1,183 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+
+<!-- Mirrored from themekar.com/templatebucket/logtra/logtra/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Aug 2024 01:52:10 GMT -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="icon" href="{{ asset('assets/icons/arjuna-trans.png') }}">
-    <link rel="stylesheet" href="assets/css/app.css">
-    {{-- <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"> --}}
-    <title>Arjuna - Trans || Login</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Login </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/all.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="assets/css/icofont.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/css/bsnav.min.css" rel="stylesheet" />
+    <link href="assets/css/preloader.css" rel="stylesheet" />
+    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+    <style>
+
+    </style>
 </head>
 
-<body>
-    <div class="gradient">
+<body id="bdy">
+    <div class="bg-wrapper">
+        <div class="gradient">
+            <div class="container-fluid p-0 m-0">
+                <div class="coverbg">
+                    <img src="assets/images/login/bg1.png" class="motif" />
+                    <img src="assets/images/login/bg2.png" class="motif1" />
+                    <img src="assets/images/login/garisBg.png" class="garis" />
+                    <img src="assets/images/login/polygon.png" class="polygon" />
+                </div>
 
-        <div class="container-fluid p-0 m-0">
-            <div class="coverbg">
-                <img src="{{ asset('assets/img/bg1.png') }}" class="motif">
-                <img src="{{ asset('assets/img/bg2.png') }}" class="motif1">
-                <img src="{{ asset('assets/img/garisBg.png') }}" class="garis">
-                <img src="{{ asset('assets/img/polygon.png') }}" class="polygon">
-            </div>
+                <div class="card user-login shadow">
+                    <div class="card-body p-0">
+                        <div class="row justify-content-center">
+                            <div class="col-md-7 d-none d-md-block bg-card">
+                                <img src="assets/images/login/arjuna-trans1.png" class="icn-logo mx-auto d-block" />
+                                <img src="assets/images/login/1.png" class="icn-mobil mx-auto d-block" />
+                            </div>
 
-            <div class="card user-login shadow" style="position: absolute">
-                <div class="card-body p-0">
-                    <div class="row justify-content-center">
-                        <div class="col-md-7 d-none d-md-block bg-card">
-                            <img src="{{ asset('assets/icons/arjuna-trans1.png') }}" class="icn-logo">
-                            <img src="{{ asset('assets/img/1.png') }}" class="icn-mobil">
-                        </div>
+                            <div class="col-md-5 p-5">
+                                <div class="d-flex justify-content-end">
+                                    <div class="dropdown">
+                                        <button class="btn btn-light dropdown-toggle" type="button"
+                                            id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            🇮🇩 Id
+                                        </button>
+                                        <ul class="dropdown-menu p-0 m-0" aria-labelledby="dropdownMenuButton">
+                                            <li>
+                                                <a class="dropdown-item" href="#">🇺🇸 As</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">🇬🇧 Eng</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">🇦🇺 Aus</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">🇮🇳 Ida</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">🇨🇳 Chi</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">🇯🇵 Jpn</a>
+                                            </li>
+                                            <!-- Tambahkan lebih banyak negara sesuai kebutuhan -->
+                                        </ul>
+                                    </div>
+                                </div>
 
-                        <div class="col-md-5 p-5">
+                                <h1 class="fw-bold">Masuk</h1>
+                                <p class="fw-bold">
+                                    Gunakan username dan password anda!
+                                </p>
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Username</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <img src="assets/images/login/SVG.svg" alt="Icon" width="25"
+                                                    height="25" />
+                                            </span>
+                                            <input type="text" class="form-control" id="exampleInputEmail1"
+                                                aria-describedby="emailHelp" placeholder="Username" />
+                                        </div>
+                                    </div>
 
-                            <div class="d-flex justify-content-end">
-                                <div class="dropdown">
-                                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        🇮🇩 Id
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <img src="assets/images/login/Form.svg" alt="Icon" width="25"
+                                                    height="25" />
+                                            </span>
+                                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                                placeholder="Enter Password" />
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                        <label class="form-check-label custom-text-color"
+                                            for="exampleCheck1">Subscribe to weekly
+                                            newsletter</label>
+                                    </div>
+
+                                    <button type="submit" class="btn w-100 text-white btn-gradient">
+                                        Masuk
                                     </button>
-                                    <ul class="dropdown-menu p-0 m-0" aria-labelledby="dropdownMenuButton">
-                                        <li><a class="dropdown-item" href="#">🇺🇸 As</a></li>
-                                        <li><a class="dropdown-item" href="#">🇬🇧 Eng</a></li>
-                                        <li><a class="dropdown-item" href="#">🇦🇺 Aus</a></li>
-                                        <li><a class="dropdown-item" href="#">🇮🇳 Ida</a></li>
-                                        <li><a class="dropdown-item" href="#">🇨🇳 Chi</a></li>
-                                        <li><a class="dropdown-item" href="#">🇯🇵 Jpn</a></li>
-                                        <!-- Tambahkan lebih banyak negara sesuai kebutuhan -->
-                                    </ul>
+                                </form>
+                                <div class="or mt-3 position-relative">
+                                    <img src="assets/images/login/or.png" alt="" class="position-relative" />
                                 </div>
-                            </div>
 
-                            <h1><b>Masuk</b></h1>
-                            <p><b>Gunakan username dan password anda!</b></p>
-                            <form>
-                                <div class="mb-2">
-                                    <label for="exampleInputEmail1" class="form-label">Username</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">
-                                            <img src="/assets/icons/SVG.svg" alt="Icon" width="25"
-                                                height="25">
-                                        </span>
-                                        <input type="text" class="form-control" id="exampleInputEmail1"
-                                            aria-describedby="emailHelp" placeholder="Username">
+                                <div class="mediasosial mt-3 d-flex justify-content-center">
+                                    <div
+                                        class="icon-circle d-flex align-items-center justify-content-center rounded-circle me-2">
+                                        <i class="bi bi-instagram"></i>
+                                    </div>
+                                    <div
+                                        class="icon-circle d-flex align-items-center justify-content-center rounded-circle me-2">
+                                        <i class="bi bi-facebook"></i>
+                                    </div>
+                                    <div
+                                        class="icon-circle d-flex align-items-center justify-content-center rounded-circle me-2">
+                                        <i class="bi bi-twitter"></i>
+                                    </div>
+                                    <div
+                                        class="icon-circle d-flex align-items-center justify-content-center rounded-circle">
+                                        <i class="bi bi-google"></i>
                                     </div>
                                 </div>
-
-                                <div class="mb-2">
-                                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">
-                                            <img src="/assets/icons/Form.svg" alt="Icon" width="25"
-                                                height="25">
-                                        </span>
-                                        <input type="password" class="form-control" id="exampleInputPassword1"
-                                            placeholder="Enter Password">
-                                    </div>
-                                </div>
-
-                                <div class="mb-2 form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                    <label class="form-check-label custom-text-color" for="exampleCheck1">Subscribe to
-                                        weekly newsletter</label>
-                                </div>
-
-                                <button type="submit" class="btn w-100 text-white btn-gradient">Masuk</button>
-                            </form>
-                            <div class="or mt-3">
-                                <img src="{{ asset('assets/img/or.png') }}" alt="">
                             </div>
-
-                            <div class="mediasosial mt-3">
-                                <div class="icon-circle">
-                                    <i class="bi bi-instagram"></i>
-                                </div>
-                                <div class="icon-circle">
-                                    <i class="bi bi-facebook"></i>
-                                </div>
-                                <div class="icon-circle">
-                                    <i class="bi bi-twitter"></i>
-                                </div>
-                                <div class="icon-circle">
-                                    <i class="bi bi-google"></i>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
-
     </div>
 
 
+    <script src="assets/js/jquery-3.7.0.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/bsnav.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/progress-bar.min.js"></script>
+    <script src="assets/js/jquery.easypiechart.js"></script>
+    <script src="assets/js/typed.js"></script>
+    <script src="assets/js/YTPlayer.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/active-class.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
-
-
-
-    <script src="{{ asset('js/app.js') }}"></script>
 </body>
+
+
+<!-- Mirrored from themekar.com/templatebucket/logtra/logtra/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Aug 2024 01:55:32 GMT -->
 
 </html>

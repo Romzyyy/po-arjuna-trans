@@ -38,7 +38,7 @@
         <div class="sidebar-wrapper" data-simplebar="true">
             <div class="sidebar-header">
                 <div>
-                    <img src="assets/img/logo/arjuna-logo.png" class="logo-icon" alt="logo icon">
+                    <img src="assets/images/logo/arjuna-logo.png" class="logo-icon" alt="logo icon">
                 </div>
                 <div>
                     <h4 class="logo-text">Arjuna Trans</h4>
