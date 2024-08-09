@@ -89,11 +89,6 @@
                                 <a class="navbar-brand g-nop" href="index.html">
                                     <div class="d-flex justify-content-center align-items-center bg-white border border-warning rounded-circle"
                                         style="width: 60px; height: 60px;">
-                                        <img src="assets/images/logo/arjuna-logo.png" class="logo-display"
-                                            alt="thumb" style="max-width: 45px; max-height: 45px;">
-                                    </div>
-                                    <div class="d-flex justify-content-center align-items-center bg-white border border-warning rounded-circle"
-                                        style="width: 60px; height: 60px;">
                                         <img src="assets/images/logo/arjuna-logo.png" class="logo-scrolled"
                                             alt="thumb" style="max-width: 45px; max-height: 45px;">
                                     </div>
@@ -112,19 +107,19 @@
                                 </a>
                                 <ul class="navbar-nav navbar-mobile justify-content-md-center w-100">
                                     <li class="nav-item dropdown fadeup">
-                                        <a class="nav-link" href="#">Home</a>
+                                        <a class="nav-link" href="#home">Home</a>
                                     </li>
                                     <li class="nav-item dropdown fadeup">
-                                        <a class="nav-link" href="#">Paket Layanan</a>
+                                        <a class="nav-link" href="#paket-layanan">Paket Layanan</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="about.html">Jadwal Trip</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#jadwal-trip">Jadwal Trip</a></li>
                                     <li class="nav-item dropdown fadeup">
-                                        <a class="nav-link" href="#">Short Video</a>
+                                        <a class="nav-link" href="#short-video">Short Video</a>
                                     </li>
                                     <li class="nav-item dropdown fadeup">
-                                        <a class="nav-link" href="#">Testimoni</a>
+                                        <a class="nav-link" href="#testimoni">Testimoni</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="contact.html">Tentang Kami</a>
+                                    <li class="nav-item"><a class="nav-link" href="#tentang-kami">Tentang Kami</a>
                                     </li>
                                 </ul>
                                 <div class="search-cart nav-profile">
@@ -147,7 +142,7 @@
 
         <!-- Start Slider
   ============================================= -->
-        <div class="hero-area pos-rel bg bg-bottom-right home-2"
+        <div class="hero-area pos-rel bg bg-bottom-right home-2" id="home"
             style="background-image: url(assets/images/gallery/Frame-5.png); background-size: 50%;">
             <div class="hero-2-shapes">
                 <img src="assets/images/shape/dag.png" class="hero-dag" alt="no image">
@@ -194,7 +189,7 @@
 
         <!-- Start About
   ============================================= -->
-        <div class="about-area-2 de-padding">
+        <div id="paket-layanan" class="about-area-2 de-padding">
             <div class="container">
                 <div class="about-wpr-2 grid-2">
                     <div class="about-left-2">
@@ -274,7 +269,7 @@
 
         <!-- Start Service
   ============================================= -->
-        <div class="service-area-2 bg-2 de-padding pos-rel">
+        <div id="jadwal-trip" class="service-area-2 bg-2 de-padding pos-rel">
             <img src="assets/images/shape/service-shape.png" class="service-shape-2" alt="no image">
             <div class="container">
                 <div class="row">
@@ -304,7 +299,7 @@
                 </div>
                 <div class="service-wpr-2 grid-3">
                     <div class="service-box-2">
-                        <div class="service-pic-2">
+                        <div class="service-pic-2 text-center text-md-start text-center text-md-start">
                             <img src="assets/images/gallery/Vector3.png" alt="no image">
                             <div class="service-desc-2">
                                 <div class="service-icon-title">
@@ -329,7 +324,7 @@
                         </div>
                     </div>
                     <div class="service-box-2">
-                        <div class="service-pic-2">
+                        <div class="service-pic-2 text-center text-md-start">
                             <img src="assets/images/gallery/Vector2.png" alt="no image">
                             <div class="service-desc-2">
                                 <div class="service-icon-title">
@@ -354,7 +349,7 @@
                         </div>
                     </div>
                     <div class="service-box-2">
-                        <div class="service-pic-2">
+                        <div class="service-pic-2 text-center text-md-start">
                             <img src="assets/images/gallery/Vector1.png" alt="no image">
                             <div class="service-desc-2">
                                 <div class="service-icon-title">
@@ -379,7 +374,7 @@
                         </div>
                     </div>
                     <div class="service-box-2">
-                        <div class="service-pic-2">
+                        <div class="service-pic-2 text-center text-md-start">
                             <img src="assets/images/gallery/Vector3.png" alt="no image">
                             <div class="service-desc-2">
                                 <div class="service-icon-title">
@@ -404,7 +399,7 @@
                         </div>
                     </div>
                     <div class="service-box-2">
-                        <div class="service-pic-2">
+                        <div class="service-pic-2 text-center text-md-start">
                             <img src="assets/images/gallery/Vector2.png" alt="no image">
                             <div class="service-desc-2">
                                 <div class="service-icon-title">
@@ -429,7 +424,7 @@
                         </div>
                     </div>
                     <div class="service-box-2">
-                        <div class="service-pic-2">
+                        <div class="service-pic-2 text-center text-md-start">
                             <img src="assets/images/gallery/Vector1.png" alt="no image">
                             <div class="service-desc-2">
                                 <div class="service-icon-title">
@@ -462,9 +457,9 @@
         <!-- Start Request
   ============================================= -->
 
-        <!-- Start Counter
+        <!-- Start Short video
   ============================================= -->
-        <div class="counter-area de-padding pos-rel hero-bg"
+        <div id="short-video" class="counter-area de-padding pos-rel hero-bg"
             style="background-image: url(assets/images/bg/bg-counter.jpg)">
             <div class="container">
                 <div class="counter-wpr">
@@ -482,54 +477,34 @@
                             </div>
                         </div>
                         <div class="col-xl-8">
-                            <div class="counter-1 grid-4">
-                                <div class="fun-fact">
+                            <div class="counter-1 d-flex flex-wrap justify-content-center">
+                                <div class="fun-fact m-2">
                                     <div class="d-flex justify-content-center overflow-hidden align-items-center counter-icon bg-white border border-warning rounded-circle"
-                                        style="width: 120px; height: 120px;">
+                                        style="width: 80px; height: 80px">
                                         <i><img src="assets/images/logo/fb.png" alt="no image"
-                                                style="max-width: 100px; max-height: 100px;"></i>
+                                                style="max-width: 60px; max-height: 60px;"></i>
                                     </div>
-                                    {{-- <div class="counter">
-                                        <div class="timer" data-to="98" data-speed="2000"></div>
-                                        <div class="operator">%</div>
-                                    </div>
-                                    <span class="medium">Business Hike</span> --}}
                                 </div>
-                                <div class="fun-fact">
+                                <div class="fun-fact m-2">
                                     <div class="d-flex justify-content-center overflow-hidden align-items-center counter-icon bg-white border border-warning rounded-circle"
-                                        style="width: 120px; height: 120px;">
+                                        style="width: 80px; height: 80px;">
                                         <i><img src="assets/images/logo/ig.png" alt="no image"
-                                                style="max-width: 100px; max-height: 100px;"></i>
+                                                style="max-width: 60px; max-height: 60px;"></i>
                                     </div>
-                                    {{-- <div class="counter">
-                                        <div class="timer" data-to="788" data-speed="2000"></div>
-                                        <div class="operator">K</div>
-                                    </div>
-                                    <span class="medium">Sales of our Products</span> --}}
                                 </div>
-                                <div class="fun-fact">
+                                <div class="fun-fact m-2">
                                     <div class="d-flex justify-content-center overflow-hidden align-items-center counter-icon bg-white border border-warning rounded-circle"
-                                        style="width: 120px; height: 120px;">
+                                        style="width: 80px; height: 80px;">
                                         <i><img src="assets/images/logo/tiktok.png" alt="no image"
-                                                style="max-width: 100px; max-height: 100px;"></i>
+                                                style="max-width: 60px; max-height: 60px;"></i>
                                     </div>
-                                    {{-- <div class="counter">
-                                        <div class="timer" data-to="150" data-speed="2000"></div>
-                                        <div class="operator">M</div>
-                                    </div>
-                                    <span class="medium">Happy clients</span> --}}
                                 </div>
-                                <div class="fun-fact">
+                                <div class="fun-fact m-2">
                                     <div class="d-flex justify-content-center overflow-hidden align-items-center counter-icon bg-white border border-warning rounded-circle"
-                                        style="width: 120px; height: 120px;">
+                                        style="width: 80px; height: 80px;">
                                         <i><img src="assets/images/logo/yt.png" alt="no image"
-                                                style="max-width: 100px; max-height: 100px;"></i>
+                                                style="max-width: 60px; max-height: 60px;"></i>
                                     </div>
-                                    {{-- <div class="counter">
-                                        <div class="timer" data-to="150" data-speed="2000"></div>
-                                        <div class="operator">M</div>
-                                    </div>
-                                    <span class="medium">Happy clients</span> --}}
                                 </div>
                             </div>
                         </div>
@@ -603,7 +578,7 @@
 
         <!-- Start Review
   ============================================= -->
-        <div class="testi-area bg-3 de-padding pos-rel">
+        <div id="testimoni" class="testi-area bg-3 de-padding pos-rel">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8 offset-xl-2">
@@ -793,7 +768,7 @@
 
         <!-- Start Contact us
   ============================================= -->
-        <div class="contact-area bg-3 de-padding">
+        <div id="tentang-kami" class="contact-area bg-3 de-padding">
             <div class="container">
                 <div class="contact-wpr">
                     <div class="row g-5">

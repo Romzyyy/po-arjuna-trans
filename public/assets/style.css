@@ -7737,7 +7737,7 @@ button:focus {
 
 /* login */
 .bg-wrapper {
-    background-image: url("images/login/bg.png");
+    background-image: url("images/login/login.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -7809,6 +7809,9 @@ button:focus {
 
 .btn-gradient {
     background: linear-gradient(to right, #ef1262, #4361ee);
+}
+.btn-gradient:hover {
+    background: linear-gradient(to right, #ee77a3, #7589e2);
 }
 
 .card.user-login {

@@ -112,20 +112,22 @@
                                                 placeholder="Enter Password" />
                                         </div>
                                     </div>
-
                                     <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                                        <input type="checkbox" id="exampleCheck1" />
                                         <label class="form-check-label custom-text-color"
                                             for="exampleCheck1">Subscribe to weekly
                                             newsletter</label>
                                     </div>
 
-                                    <button type="submit" class="btn w-100 text-white btn-gradient">
+
+
+                                    <button type="submit"
+                                        class="btn w-100 p-3 fs-4 fw-semibold text-white btn-gradient">
                                         Masuk
                                     </button>
                                 </form>
-                                <div class="or mt-3 position-relative">
-                                    <img src="assets/images/login/or.png" alt="" class="position-relative" />
+                                <div class="or mt-3 position-relative d-flex justify-content-center">
+                                    <img src="assets/images/login/or.png" alt="" />
                                 </div>
 
                                 <div class="mediasosial mt-3 d-flex justify-content-center">
