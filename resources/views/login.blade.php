@@ -1,19 +1,13 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 
-
-<!-- Mirrored from themekar.com/templatebucket/logtra/logtra/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Aug 2024 01:52:10 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title> Login </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Place favicon.ico in the root directory -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
-    <!-- ========== Start Stylesheet ========== -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/all.min.css" rel="stylesheet" />
     <link href="assets/css/animate.css" rel="stylesheet" />
@@ -27,10 +21,7 @@
     <link href="assets/style.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet" />
-    <!-- ========== End Stylesheet ========== -->
-
     <style>
-
     </style>
 </head>
 
@@ -79,7 +70,6 @@
                                             <li>
                                                 <a class="dropdown-item" href="#">🇯🇵 Jpn</a>
                                             </li>
-                                            <!-- Tambahkan lebih banyak negara sesuai kebutuhan -->
                                         </ul>
                                     </div>
                                 </div>
@@ -176,11 +166,7 @@
     <script src="assets/js/active-class.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/main.js"></script>
-
-    
+    <script src="assets/js/app.js"></script>
 </body>
-
-
-<!-- Mirrored from themekar.com/templatebucket/logtra/logtra/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Aug 2024 01:55:32 GMT -->
 
 </html>

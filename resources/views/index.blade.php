@@ -1,43 +1,31 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
 
-
-<!-- Mirrored from themekar.com/templatebucket/logtra/logtra/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Aug 2024 01:52:10 GMT -->
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title> Arjuna Trans</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="icon" type="image/x-icon" href="assets/images/logo/arjuna-logo.png">
-    <!-- ========== Start Stylesheet ========== -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/all.min.css" rel="stylesheet" />
-    <link href="assets/css/animate.css" rel="stylesheet" />
-    <link href="assets/css/themify-icons.css" rel="stylesheet" />
-    <link href="assets/css/icofont.min.css" rel="stylesheet" />
-    <link href="assets/css/bootstrap-icons.css" rel="stylesheet" />
-    <link href="assets/css/bsnav.min.css" rel="stylesheet" />
-    <link href="assets/css/preloader.css" rel="stylesheet" />
-    <link href="assets/css/magnific-popup.css" rel="stylesheet" />
-    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="assets/style.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <link href="assets/css/responsive.css" rel="stylesheet" />
-    <!-- ========== End Stylesheet ========== -->
-
-    <style>
-
-    </style>
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/logo/arjuna-logo.png') }}">
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/all.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/animate.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/themify-icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/icofont.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/bootstrap-icons.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/bsnav.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/preloader.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/magnific-popup.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/swiper-bundle.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" />
+    @vite([asset('resources/js/app.js')])
 </head>
 
 <body id="bdy">
 
-    <!-- Start PreLoader
-    ============================================= -->
     <div class="preloader">
         <div class="preloader-container">
             <span class="preloader-text">Logtra</span>
@@ -45,10 +33,7 @@
             </div>
         </div>
     </div>
-    <!-- Start PreLoader-->
 
-    <!-- Start header
-    ============================================= -->
     <header class="header header-before-off">
         <div class="main-wrapper">
             <div class="navbar navbar-expand-lg bsnav bsnav-sticky bsnav-sticky-slide bsnav-transparent">
@@ -112,20 +97,23 @@
                                     <li class="nav-item dropdown fadeup">
                                         <a class="nav-link" href="#paket-layanan">Paket Layanan</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="#jadwal-trip">Jadwal Trip</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#jadwal-trip">Jadwal Trip</a>
+                                    </li>
                                     <li class="nav-item dropdown fadeup">
                                         <a class="nav-link" href="#short-video">Short Video</a>
                                     </li>
                                     <li class="nav-item dropdown fadeup">
                                         <a class="nav-link" href="#testimoni">Testimoni</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="#tentang-kami">Tentang Kami</a>
+                                    <li class="nav-item"><a class="nav-link" href="#tentang-kami">Tentang
+                                            Kami</a>
                                     </li>
                                 </ul>
                                 <div class="search-cart nav-profile">
                                     <a href="contact.html" class="btn-1 btn-sm">Let's Begin</a>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -136,12 +124,7 @@
             </div>
         </div>
     </header>
-    <!-- End header -->
-
     <main class="main">
-
-        <!-- Start Slider
-  ============================================= -->
         <div class="hero-area pos-rel bg bg-bottom-right home-2" id="home"
             style="background-image: url(assets/images/gallery/Frame-5.png); background-size: 50%;">
             <div class="hero-2-shapes">
@@ -185,10 +168,7 @@
                 </div>
             </div>
         </div>
-        <!-- End Slider -->
 
-        <!-- Start About
-  ============================================= -->
         <div id="paket-layanan" class="about-area-2 de-padding">
             <div class="container">
                 <div class="about-wpr-2 grid-2">
@@ -265,10 +245,7 @@
                 </div>
             </div>
         </div>
-        <!-- End About -->
 
-        <!-- Start Service
-  ============================================= -->
         <div id="jadwal-trip" class="service-area-2 bg-2 de-padding pos-rel">
             <img src="assets/images/shape/service-shape.png" class="service-shape-2" alt="no image">
             <div class="container">
@@ -452,13 +429,7 @@
                 </div>
             </div>
         </div>
-        <!-- End Service -->
 
-        <!-- Start Request
-  ============================================= -->
-
-        <!-- Start Short video
-  ============================================= -->
         <div id="short-video" class="counter-area de-padding pos-rel hero-bg"
             style="background-image: url(assets/images/bg/bg-counter.jpg)">
             <div class="container">
@@ -473,33 +444,33 @@
                                 <h2 class="heading-2 mb-30">
                                     Video Unggahan Tentang Arjuna Travel
                                 </h2>
-                                <a href="about.html" class="btn-5 btn-md">Bukan Youtue Kami</a>
+                                <a href="about.html" class="btn-5 btn-md">Buka Youtue Kami</a>
                             </div>
                         </div>
                         <div class="col-xl-8">
                             <div class="counter-1 d-flex flex-wrap justify-content-center">
-                                <div class="fun-fact m-2">
+                                <div class="fun-fact m-2 md:m-5">
                                     <div class="d-flex justify-content-center overflow-hidden align-items-center counter-icon bg-white border border-warning rounded-circle"
                                         style="width: 80px; height: 80px">
                                         <i><img src="assets/images/logo/fb.png" alt="no image"
                                                 style="max-width: 60px; max-height: 60px;"></i>
                                     </div>
                                 </div>
-                                <div class="fun-fact m-2">
+                                <div class="fun-fact m-2 md:m-5">
                                     <div class="d-flex justify-content-center overflow-hidden align-items-center counter-icon bg-white border border-warning rounded-circle"
                                         style="width: 80px; height: 80px;">
                                         <i><img src="assets/images/logo/ig.png" alt="no image"
                                                 style="max-width: 60px; max-height: 60px;"></i>
                                     </div>
                                 </div>
-                                <div class="fun-fact m-2">
+                                <div class="fun-fact m-2 md:m-5">
                                     <div class="d-flex justify-content-center overflow-hidden align-items-center counter-icon bg-white border border-warning rounded-circle"
                                         style="width: 80px; height: 80px;">
                                         <i><img src="assets/images/logo/tiktok.png" alt="no image"
                                                 style="max-width: 60px; max-height: 60px;"></i>
                                     </div>
                                 </div>
-                                <div class="fun-fact m-2">
+                                <div class="fun-fact m-2 md:m-5">
                                     <div class="d-flex justify-content-center overflow-hidden align-items-center counter-icon bg-white border border-warning rounded-circle"
                                         style="width: 80px; height: 80px;">
                                         <i><img src="assets/images/logo/yt.png" alt="no image"
@@ -513,44 +484,41 @@
             </div>
         </div>
 
-        <!-- End Counter -->
-
-        {{-- start video unggahan --}}
         <div class="container-fluid text-center">
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 my-5 g-4">
                 <div class="col mb-4">
                     <div class="ratio ratio-16x9 video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/vlDzYIIOYmM" title="YouTube video"
+                        <iframe src="https://www.youtube.com/embed/ihaTIuaPSew" title="YouTube video"
                             allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col mb-4">
                     <div class="ratio ratio-16x9 video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/vlDzYIIOYmM" title="YouTube video"
+                        <iframe src="https://www.youtube.com/embed/64XsL-3BCtM" title="YouTube video"
                             allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col mb-4">
                     <div class="ratio ratio-16x9 video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/vlDzYIIOYmM" title="YouTube video"
+                        <iframe src="https://www.youtube.com/embed/uXtIRNYKMdM" title="YouTube video"
                             allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col mb-4">
                     <div class="ratio ratio-16x9 video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/vlDzYIIOYmM" title="YouTube video"
+                        <iframe src="https://www.youtube.com/embed/84tk_xVEgOg" title="YouTube video"
                             allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col mb-4">
                     <div class="ratio ratio-16x9 video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/vlDzYIIOYmM" title="YouTube video"
+                        <iframe src="https://www.youtube.com/embed/v37n93CUC8k" title="YouTube video"
                             allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col mb-4">
                     <div class="ratio ratio-16x9 video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/vlDzYIIOYmM" title="YouTube video"
+                        <iframe src="https://www.youtube.com/embed/yd1e6WEjmo" title="YouTube video"
                             allowfullscreen></iframe>
                     </div>
                 </div>
@@ -572,12 +540,6 @@
             </div>
         </div>
 
-
-
-        {{-- end video --}}
-
-        <!-- Start Review
-  ============================================= -->
         <div id="testimoni" class="testi-area bg-3 de-padding pos-rel">
             <div class="container">
                 <div class="row">
@@ -761,13 +723,7 @@
                 </div>
             </div>
         </div>
-        <!-- End Review -->
 
-        <!-- Start Team
-  ============================================= -->
-
-        <!-- Start Contact us
-  ============================================= -->
         <div id="tentang-kami" class="contact-area bg-3 de-padding">
             <div class="container">
                 <div class="contact-wpr">
@@ -894,43 +850,31 @@
                 </div>
             </div>
         </div>
-        <!-- End Contact us -->
-
     </main>
 
-    ======================== -->
-
-
-    <!-- Start Scroll top
- ============================================= -->
     <a href="#bdy" id="scrtop" class="smooth-menu"><i class="ti-arrow-up"></i></a>
-    <!-- End Scroll top-->
 
-    <!-- jQuery Frameworks
-    ============================================= -->
-    <script src="assets/js/jquery-3.7.0.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/bsnav.min.js"></script>
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/count-to.js"></script>
-    <script src="assets/js/progress-bar.min.js"></script>
-    <script src="assets/js/jquery.easypiechart.js"></script>
-    <script src="assets/js/typed.js"></script>
-    <script src="assets/js/YTPlayer.min.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/jquery.easing.min.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/active-class.js"></script>
-    <script src="assets/js/jquery-ui.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/jquery-3.7.0.min.js') }}"></script>
+    <script src="{{ asset('assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bsnav.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('assets/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ asset('assets/js/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/js/count-to.js') }}"></script>
+    <script src="{{ asset('assets/js/progress-bar.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.easypiechart.js') }}"></script>
+    <script src="{{ asset('assets/js/typed.js') }}"></script>
+    <script src="{{ asset('assets/js/YTPlayer.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.appear.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/active-class.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
 
 </body>
-
-
-<!-- Mirrored from themekar.com/templatebucket/logtra/logtra/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Aug 2024 01:55:32 GMT -->
 
 </html>
