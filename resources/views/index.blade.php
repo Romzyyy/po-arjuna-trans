@@ -24,7 +24,7 @@
     @vite([asset('resources/js/app.js')])
 </head>
 
-<body id="bdy">
+<body id="body">
 
     <div class="preloader">
         <div class="preloader-container">
@@ -37,18 +37,19 @@
     <header class="header header-before-off">
         <div class="main-wrapper">
             <div class="navbar navbar-expand-lg bsnav bsnav-sticky bsnav-sticky-slide bsnav-transparent">
-                <img src="assets/images/bg/bg-nav.png" alt="no image" class="navbar-bar-shape">
+                <img src="{{ asset('assets/images/bg/bg-nav.png') }}" alt="no image" class="navbar-bar-shape">
                 <div class="navbar-container">
                     <div class="navbar-extra-logo">
                         <div class="d-flex justify-content-center align-items-center bg-white border border-warning rounded-circle"
                             style="width: 140px; height: 140px;">
-                            <img src="assets/images/logo/arjuna-logo.png" class="logo-outside" alt="thumb"
-                                style="max-width: 100px; max-height: 100px;">
+                            <img src="{{ asset('assets/images/logo/arjuna-logo.png') }}" class="logo-outside"
+                                alt="thumb" style="max-width: 100px; max-height: 100px;">
                         </div>
                     </div>
                     <div class="top-header-menu">
                         <div class="top-bar-area pos-rel topbar-white">
-                            <img src="assets/images/bg/topbar-bg.png" alt="no image" class="top-bar-shape">
+                            <img src="{{ asset('assets/images/bg/topbar-bg.png') }}" alt="no image"
+                                class="top-bar-shape">
                             <div class="row">
                                 <div class="col-xl-10 col-lg-6">
                                     <div class="top-box-wrp d-flex justify-content-center align-items-center">
@@ -74,8 +75,12 @@
                                 <a class="navbar-brand g-nop" href="index.html">
                                     <div class="d-flex justify-content-center align-items-center bg-white border border-warning rounded-circle"
                                         style="width: 60px; height: 60px;">
-                                        <img src="assets/images/logo/arjuna-logo.png" class="logo-scrolled"
-                                            alt="thumb" style="max-width: 45px; max-height: 45px;">
+                                        <img src="{{ asset('assets/images/logo/arjuna-logo.png') }}"
+                                            class="logo-display" alt="thumb"
+                                            style="max-width: 45px; max-height: 45px;">
+                                        <img src="{{ asset('assets/images/logo/arjuna-logo.png') }}"
+                                            class="logo-scrolled" alt="thumb"
+                                            style="max-width: 45px; max-height: 45px;">
                                     </div>
                                 </a>
                                 <button class="navbar-toggler toggler-spring">
@@ -83,11 +88,12 @@
                                 </button>
                             </div>
                             <div class="collapse navbar-collapse justify-content-md-between">
-                                <a class="navbar-brand nop" href="index.html">
+                                <a class="navbar-brand nop" href="#home">
                                     <div class="d-flex justify-content-center align-items-center bg-white border border-warning rounded-circle"
                                         style="width: 60px; height: 60px;">
-                                        <img src="assets/images/logo/arjuna-logo.png" class="logo-display"
-                                            alt="thumb" style="max-width: 45px; max-height: 45px;">
+                                        <img src="{{ asset('assets/images/logo/arjuna-logo.png') }}"
+                                            class="logo-display" alt="thumb"
+                                            style="max-width: 45px; max-height: 45px;">
                                     </div>
                                 </a>
                                 <ul class="navbar-nav navbar-mobile justify-content-md-center w-100">
@@ -126,14 +132,18 @@
     </header>
     <main class="main">
         <div class="hero-area pos-rel bg bg-bottom-right home-2" id="home"
-            style="background-image: url(assets/images/gallery/Frame-5.png); background-size: 50%;">
+            style="background-image: url({{ asset('assets/images/gallery/Frame-5.png') }}); background-size: 50%;">
             <div class="hero-2-shapes">
-                <img src="assets/images/shape/dag.png" class="hero-dag" alt="no image">
-                <img src="assets/images/shape/dot-circle.png" class="hero-dot-circle" alt="no image">
-                <img src="assets/images/shape/half-circle-2.png" class="half-circle-2" alt="no image">
-                <img src="assets/images/shape/half-circle-1.png" class="half-circle-1" alt="no image">
-                <img src="assets/images/shape/half-circle-3.png" class="hero-half-circle-3" alt="no image">
-                <img src="assets/images/shape/shape-bottom.png" class="hero-shape-bottom" alt="no image">
+                <img src="{{ asset('assets/images/shape/dag.png') }}" class="hero-dag" alt="no image">
+                <img src="{{ asset('assets/images/shape/dot-circle.png') }}" class="hero-dot-circle" alt="no image">
+                <img src="{{ asset('assets/images/shape/half-circle-2.png') }}" class="half-circle-2"
+                    alt="no image">
+                <img src="{{ asset('assets/images/shape/half-circle-1.png') }}" class="half-circle-1"
+                    alt="no image">
+                <img src="{{ asset('assets/images/shape/half-circle-3.png') }}" class="hero-half-circle-3"
+                    alt="no image">
+                <img src="{{ asset('assets/images/shape/shape-bottom.png') }}" class="hero-shape-bottom"
+                    alt="no image">
             </div>
             <div class="hero-single">
                 <div class="container">
@@ -176,17 +186,17 @@
                         <div class="about-left-img">
                             <div class="about-phase grid-2">
                                 <div class="about-phase-1">
-                                    <img src="assets/images/gallery/orang.png" alt="no image"
+                                    <img src="{{ asset('assets/images/gallery/orang.png') }}" alt="no image"
                                         class="about-left-img-main mb-30 rounded-4">
-                                    <img src="assets/images/gallery/bussatu.png" alt="no image"
+                                    <img src="{{ asset('assets/images/gallery/bussatu.png') }}" alt="no image"
                                         class="about-left-img-main rounded-4">
                                 </div>
                                 <div class="about-phase-2 element-center">
-                                    <img src="assets/images/gallery/mobil.png" alt="no image"
+                                    <img src="{{ asset('assets/images/gallery/mobil.png') }}" alt="no image"
                                         class="about-left-img-main rounded-4">
                                 </div>
                             </div>
-                            <img src="assets/images/vector/about-shape.png" alt="no image"
+                            <img src="{{ asset('assets/images/vector/about-shape.png') }}" alt="no image"
                                 class="about-left-img-shape">
                         </div>
                     </div>
@@ -229,7 +239,8 @@
                                 <div class="about-opt-right-box-2 about-opt-right-pd">
                                     <div class="about-opt-icon-2">
                                         <i>
-                                            <img src="assets/images/icon/satisfaction.png" alt="no image">
+                                            <img src="{{ asset('assets/images/icon/satisfaction.png') }}"
+                                                alt="no image">
                                         </i>
                                     </div>
                                     <div class="about-opt-desc-2">
@@ -247,7 +258,7 @@
         </div>
 
         <div id="jadwal-trip" class="service-area-2 bg-2 de-padding pos-rel">
-            <img src="assets/images/shape/service-shape.png" class="service-shape-2" alt="no image">
+            <img src="{{ asset('assets/images/shape/service-shape.png') }}" class="service-shape-2" alt="no image">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-8">
@@ -277,12 +288,13 @@
                 <div class="service-wpr-2 grid-3">
                     <div class="service-box-2">
                         <div class="service-pic-2 text-center text-md-start text-center text-md-start">
-                            <img src="assets/images/gallery/Vector3.png" alt="no image">
+                            <img src="{{ asset('assets/images/gallery/Vector3.png') }}" alt="no image">
                             <div class="service-desc-2">
                                 <div class="service-icon-title">
                                     <div class="service-icon-2">
                                         <i>
-                                            <img src="assets/images/icon/cargo-ship.png" alt="no image">
+                                            <img src="{{ asset('assets/images/icon/cargo-ship.png') }}"
+                                                alt="no image">
                                         </i>
                                     </div>
                                     <div class="service-title-2">
@@ -302,12 +314,13 @@
                     </div>
                     <div class="service-box-2">
                         <div class="service-pic-2 text-center text-md-start">
-                            <img src="assets/images/gallery/Vector2.png" alt="no image">
+                            <img src="{{ asset('assets/images/gallery/Vector2.png') }}" alt="no image">
                             <div class="service-desc-2">
                                 <div class="service-icon-title">
                                     <div class="service-icon-2">
                                         <i>
-                                            <img src="assets/images/icon/cargo-ship.png" alt="no image">
+                                            <img src="{{ asset('assets/images/icon/cargo-ship.png') }}"
+                                                alt="no image">
                                         </i>
                                     </div>
                                     <div class="service-title-2">
@@ -327,12 +340,13 @@
                     </div>
                     <div class="service-box-2">
                         <div class="service-pic-2 text-center text-md-start">
-                            <img src="assets/images/gallery/Vector1.png" alt="no image">
+                            <img src="{{ asset('assets/images/gallery/Vector1.png') }}" alt="no image">
                             <div class="service-desc-2">
                                 <div class="service-icon-title">
                                     <div class="service-icon-2">
                                         <i>
-                                            <img src="assets/images/icon/Icon-plane.png" alt="no image">
+                                            <img src="{{ asset('assets/images/icon/Icon-plane.png') }}"
+                                                alt="no image">
                                         </i>
                                     </div>
                                     <div class="service-title-2">
@@ -352,12 +366,13 @@
                     </div>
                     <div class="service-box-2">
                         <div class="service-pic-2 text-center text-md-start">
-                            <img src="assets/images/gallery/Vector3.png" alt="no image">
+                            <img src="{{ asset('assets/images/gallery/Vector3.png') }}" alt="no image">
                             <div class="service-desc-2">
                                 <div class="service-icon-title">
                                     <div class="service-icon-2">
                                         <i>
-                                            <img src="assets/images/icon/cargo-ship.png" alt="no image">
+                                            <img src="{{ asset('assets/images/icon/cargo-ship.png') }}"
+                                                alt="no image">
                                         </i>
                                     </div>
                                     <div class="service-title-2">
@@ -377,12 +392,13 @@
                     </div>
                     <div class="service-box-2">
                         <div class="service-pic-2 text-center text-md-start">
-                            <img src="assets/images/gallery/Vector2.png" alt="no image">
+                            <img src="{{ asset('assets/images/gallery/Vector2.png') }}" alt="no image">
                             <div class="service-desc-2">
                                 <div class="service-icon-title">
                                     <div class="service-icon-2">
                                         <i>
-                                            <img src="assets/images/icon/cargo-ship.png" alt="no image">
+                                            <img src="{{ asset('assets/images/icon/cargo-ship.png') }}"
+                                                alt="no image">
                                         </i>
                                     </div>
                                     <div class="service-title-2">
@@ -402,12 +418,13 @@
                     </div>
                     <div class="service-box-2">
                         <div class="service-pic-2 text-center text-md-start">
-                            <img src="assets/images/gallery/Vector1.png" alt="no image">
+                            <img src="{{ asset('assets/images/gallery/Vector1.png') }}" alt="no image">
                             <div class="service-desc-2">
                                 <div class="service-icon-title">
                                     <div class="service-icon-2">
                                         <i>
-                                            <img src="assets/images/icon/Icon-plane.png" alt="no image">
+                                            <img src="{{ asset('assets/images/icon/Icon-plane.png') }}"
+                                                alt="no image">
                                         </i>
                                     </div>
                                     <div class="service-title-2">
@@ -431,7 +448,7 @@
         </div>
 
         <div id="short-video" class="counter-area de-padding pos-rel hero-bg"
-            style="background-image: url(assets/images/bg/bg-counter.jpg)">
+            style="background-image: url({{ asset('assets/images/bg/bg-counter.jpg') }})">
             <div class="container">
                 <div class="counter-wpr">
                     <div class="row align-items-center">
@@ -452,28 +469,28 @@
                                 <div class="fun-fact m-2 md:m-5">
                                     <div class="d-flex justify-content-center overflow-hidden align-items-center counter-icon bg-white border border-warning rounded-circle"
                                         style="width: 80px; height: 80px">
-                                        <i><img src="assets/images/logo/fb.png" alt="no image"
+                                        <i><img src="{{ asset('assets/images/logo/fb.png') }}" alt="no image"
                                                 style="max-width: 60px; max-height: 60px;"></i>
                                     </div>
                                 </div>
                                 <div class="fun-fact m-2 md:m-5">
                                     <div class="d-flex justify-content-center overflow-hidden align-items-center counter-icon bg-white border border-warning rounded-circle"
                                         style="width: 80px; height: 80px;">
-                                        <i><img src="assets/images/logo/ig.png" alt="no image"
+                                        <i><img src="{{ asset('assets/images/logo/ig.png') }}" alt="no image"
                                                 style="max-width: 60px; max-height: 60px;"></i>
                                     </div>
                                 </div>
                                 <div class="fun-fact m-2 md:m-5">
                                     <div class="d-flex justify-content-center overflow-hidden align-items-center counter-icon bg-white border border-warning rounded-circle"
                                         style="width: 80px; height: 80px;">
-                                        <i><img src="assets/images/logo/tiktok.png" alt="no image"
+                                        <i><img src="{{ asset('assets/images/logo/tiktok.png') }}" alt="no image"
                                                 style="max-width: 60px; max-height: 60px;"></i>
                                     </div>
                                 </div>
                                 <div class="fun-fact m-2 md:m-5">
                                     <div class="d-flex justify-content-center overflow-hidden align-items-center counter-icon bg-white border border-warning rounded-circle"
                                         style="width: 80px; height: 80px;">
-                                        <i><img src="assets/images/logo/yt.png" alt="no image"
+                                        <i><img src="{{ asset('assets/images/logo/yt.png') }}" alt="no image"
                                                 style="max-width: 60px; max-height: 60px;"></i>
                                     </div>
                                 </div>
@@ -488,37 +505,58 @@
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 my-5 g-4">
                 <div class="col mb-4">
                     <div class="ratio ratio-16x9 video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/ihaTIuaPSew" title="YouTube video"
+                        <iframe width="560" height="315"
+                            src="{{ asset('https://www.youtube.com/embed/yd1e6WEjmo') }}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; 
+                                clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="ratio ratio-16x9 video-thumbnail">
+                        <iframe width="560" height="315"
+                            src="{{ asset('https://www.youtube.com/embed/2Z9hqVqPY_s?si=wxuSswCieKKcMPIi') }}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="ratio ratio-16x9 video-thumbnail">
+                        <iframe width="560" height="315"
+                            src="{{ asset('https://www.youtube.com/embed/y3PRSeEqwLo?si=pdBhxg_grKGPkYCs') }}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="ratio ratio-16x9 video-thumbnail">
+                        <iframe width="560" height="315"
+                            src="{{ asset('https://www.youtube.com/embed/y3PRSeEqwLo?si=pdBhxg_grKGPkYCs') }}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col mb-4">
                     <div class="ratio ratio-16x9 video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/64XsL-3BCtM" title="YouTube video"
+                        <iframe width="560" height="315"
+                            src="{{ asset('https://www.youtube.com/embed/y3PRSeEqwLo?si=pdBhxg_grKGPkYCs') }}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="col mb-4">
                     <div class="ratio ratio-16x9 video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/uXtIRNYKMdM" title="YouTube video"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="ratio ratio-16x9 video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/84tk_xVEgOg" title="YouTube video"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="ratio ratio-16x9 video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/v37n93CUC8k" title="YouTube video"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div class="ratio ratio-16x9 video-thumbnail">
-                        <iframe src="https://www.youtube.com/embed/yd1e6WEjmo" title="YouTube video"
+                        <iframe width="560" height="315"
+                            src="{{ asset('https://www.youtube.com/embed/y3PRSeEqwLo?si=pdBhxg_grKGPkYCs') }}"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                     </div>
                 </div>
@@ -562,22 +600,28 @@
                                 <div thumbsSlider="" class="swiper testi-sldr">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="assets/images/pictures/80x80-1.png" alt="no image" />
+                                            <img src="{{ asset('assets/images/pictures/80x80-1.png') }}"
+                                                alt="no image" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="assets/images/pictures/80x80-2.png" alt="no image" />
+                                            <img src="{{ asset('assets/images/pictures/80x80-2.png') }}"
+                                                alt="no image" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="assets/images/pictures/80x80-3.png" alt="no image" />
+                                            <img src="{{ asset('assets/images/pictures/80x80-3.png') }}"
+                                                alt="no image" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="assets/images/pictures/80x80-4.png" alt="no image" />
+                                            <img src="{{ asset('assets/images/pictures/80x80-4.png') }}"
+                                                alt="no image" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="assets/images/pictures/80x80-5.png" alt="no image" />
+                                            <img src="{{ asset('assets/images/pictures/80x80-5.png') }}"
+                                                alt="no image" />
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="assets/images/pictures/80x80-6.png" alt="no image" />
+                                            <img src="{{ asset('assets/images/pictures/80x80-6.png') }}"
+                                                alt="no image" />
                                         </div>
                                     </div>
                                 </div>
@@ -782,9 +826,7 @@
                         </div>
                         <div class="col-xl-8">
                             <div class="contact-home pl-30">
-                                <form
-                                    action="https://themekar.com/templatebucket/logtra/logtra/assets/mail/contact.php"
-                                    method="post" class="contact-form">
+                                <form action="#" method="post" class="contact-form">
                                     <div class="contact-form-title mb-30">
                                         <h2 class="heading-1">
                                             TESTIMONI ANDA
@@ -873,7 +915,7 @@
     <script src="{{ asset('assets/js/active-class.js') }}"></script>
     <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
-    <script src="{{ asset('assets/js/app.js') }}"></script>
+    {{-- <script src="{{ asset('assets/js/app.js') }}"></script> --}}
 
 </body>
 

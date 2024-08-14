@@ -7,19 +7,19 @@
     <title> Login </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/logo/arjuna-logo.png') }}">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/all.min.css" rel="stylesheet" />
     <link href="assets/css/animate.css" rel="stylesheet" />
     <link href="assets/css/themify-icons.css" rel="stylesheet" />
-    <link href="assets/css/icofont.min.css" rel="stylesheet" />
+    {{-- <link href="assets/css/icofont.min.css" rel="stylesheet" /> --}}
     <link href="assets/css/bootstrap-icons.css" rel="stylesheet" />
     <link href="assets/css/bsnav.min.css" rel="stylesheet" />
     <link href="assets/css/preloader.css" rel="stylesheet" />
     <link href="assets/css/magnific-popup.css" rel="stylesheet" />
     <link href="assets/css/swiper-bundle.min.css" rel="stylesheet" />
     <link href="assets/style.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    {{-- <link href="style.css" rel="stylesheet"> --}}
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <style>
     </style>
@@ -146,7 +146,7 @@
         </div>
     </div>
 
-    <script src='/resources/js/app.js'></script>
+    {{-- <script src='/resources/js/app.js'></script> --}}
     <script src="assets/js/jquery-3.7.0.min.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
@@ -166,7 +166,7 @@
     <script src="assets/js/active-class.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/app.js"></script>
+    {{-- <script src="assets/js/app.js"></script> --}}
 </body>
 
 </html>

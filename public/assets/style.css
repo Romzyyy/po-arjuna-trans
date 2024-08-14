@@ -1,11 +1,4 @@
 /*------------------------------------------------------------------
-  Theme Name: Logtra - Transportation & Logistics HTML Template
-  Author: Kazi Shahiduzzaman
-  Description: Logtra - Transportation & Logistics HTML Template. Can be Used For Various Perposes.
-  Version: 1.0
--------------------------------------------------------------------*/
-/*------------------------------------------------------------------
-[Table of contents]
 
 1. Variable css
 2. Mixins Css 
@@ -5495,7 +5488,7 @@ ul.chk {
     content: "";
     bottom: -80px;
     left: 35%;
-    background-image: url(img/icon/testi-arrow.png);
+    background-image: url(images/icon/testi-arrow.png);
     height: 3.4rem;
     width: 6rem;
     transform: translate(-50%, 0);
