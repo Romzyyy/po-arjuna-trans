@@ -1,17 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TransUsersController;
+use App\Http\Controllers\TransLayananController;
+use App\Http\Controllers\TransTripController;
+use App\Http\Controllers\TransShortVideoController;
+use App\Http\Controllers\TransTestimoniController;
+use App\Http\Controllers\TransTentangkamiController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::get('/', function () {
     return view('index');
@@ -62,3 +58,27 @@ Route::get('/pengaturan-tentang-kami', function () {
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//json users
+Route::get('/usersTrans', [TransUsersController::class, 'index'])->name('usersTrans');
+
+
+//json layanan
+Route::get('/LayananTrans', [TransLayananController::class, 'index'])->name('LayananTrans');
+
+
+//json trip
+Route::get('/TripTrans', [TransTripController::class, 'index'])->name('TripTrans');
+
+
+//json short video
+Route::get('/ShortVideoTrans', [TransShortVideoController::class, 'index'])->name('ShortVideoTrans');
+
+
+//json short video
+Route::get('/TestimoniTrans', [TransTestimoniController::class, 'index'])->name('TestimoniTrans');
+
+
+//json tentang kami
+Route::get('/TentangkamiTrans', [TransTentangkamiController::class, 'index'])->name('TentangkamiTrans');
