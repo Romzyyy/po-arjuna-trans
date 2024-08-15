@@ -13,10 +13,14 @@ return new class extends Migration
     {
         Schema::create('Trans_Layanan', function (Blueprint $table) {
            $table->id();
-           $table->string('Nama_Layanan');
+           $table->string('Judul_Halaman');
+           $table->text('Keterangan_Umum');
+           $table->string('Wa')->uniqid();
+           $table->integer('Total_Pelanggan');
+           $table->integer('Total_Pelanggan_Terlayani');
            $table->string('Gambar');
-           $table->string('Keterangan');
-           $table->enum('Aktif', ['Aktif', 'Tidak Aktif'])->default('Aktif');
+           $table->string('Gambar1');
+           $table->string('Gambar2');
 
         });
     }

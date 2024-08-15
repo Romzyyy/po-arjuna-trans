@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TransUsersController;
+use App\Http\Controllers\TransLayananController;
+use App\Http\Controllers\TransTripController;
+use App\Http\Controllers\TransShortVideoController;
 
 
 Route::get('/', function () {
@@ -55,5 +58,17 @@ Route::get('/pengaturan-tentang-kami', function () {
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-//json
-Route::get('/users', [TransUsersController::class, 'index'])->name('users') ;
+//json users
+Route::get('/usersTrans', [TransUsersController::class, 'index'])->name('usersTrans') ;
+
+
+//json layanan
+Route::get('/LayananTrans', [TransLayananController::class, 'index'])->name('LayananTrans') ;
+
+
+//json trip
+Route::get('/TripTrans', [TransTripController::class, 'index'])->name('TripTrans') ;
+
+
+//json short video
+Route::get('/ShortVideoTrans', [TransShortVideoController::class, 'index'])->name('ShortVideoTrans') ;

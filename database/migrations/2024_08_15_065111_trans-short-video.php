@@ -11,11 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Trans_Trip', function (Blueprint $table) {
+        Schema::create('Trans_Short_Video', function (Blueprint $table) {
             $table->id();
             $table->string('Judul_Halaman');
-            $table->string('Wa');
-            $table->date('Jadwal_Trip');
+            $table->text('Youtube');
+            $table->text('Instagram');
+            $table->text('Tiktok');
+            $table->text('Facebook');
+            $table->integer('Short_Video');
         });
     }
 
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('Trans_Trip');
+        Schema::dropIfExists('trans_short_video');
     }
 };

@@ -15,7 +15,7 @@ class TransUsersController extends Controller
             return[
                 'Id' => $users->id,
                 'Nama' => $users->Username,
-                'Email' => $users->Email,
+                'Email' => $users->Email
                 // 'Level' => $users->Pola
             ];
         });
@@ -63,7 +63,7 @@ class TransUsersController extends Controller
     
         $users = trans_users::find($id);
         if (!$users) {
-            return response()->json(['message' => 'User not found'], 404);
+            return response()->json(['message' => 'User Tidak Ada'], 404);
         }
     
 

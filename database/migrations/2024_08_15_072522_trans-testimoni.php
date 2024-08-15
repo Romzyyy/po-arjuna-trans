@@ -11,12 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Trans_Trip', function (Blueprint $table) {
-            $table->id();
-            $table->string('Judul_Halaman');
-            $table->string('Wa');
-            $table->date('Jadwal_Trip');
-        });
+        //
     }
 
     /**
@@ -24,6 +19,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('Trans_Trip');
+        //
     }
 };
