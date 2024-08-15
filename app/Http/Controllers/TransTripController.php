@@ -47,7 +47,7 @@ class TransTripController extends Controller
                 'required',
                 'regex:/^\+62[0-9]{9,11}$/',
                 'string',
-                // Mengabaikan pengecekan duplikat untuk ID yang sedang diperbarui
+
                 Rule::unique('trans_trip', 'Wa')->ignore($id)
             ],
             'Jadwal_Trip' => 'required|date',
