@@ -11,11 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Trans_Trip', function (Blueprint $table) {
+        Schema::create('Trans_Tentangkami', function (Blueprint $table) {
             $table->id();
-            $table->string('Judul_Halaman');
-            $table->string('Wa')->uniqid();
-            $table->date('Jadwal_Trip');
+            $table->string('Email')->uniqid();
+            $table->string('Sub_Judul');
+            $table->string('Alamat');
+            $table->string('Wa');
+            $table->string('Telpon');
+
         });
     }
 
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('Trans_Trip');
+        Schema::dropIfExists('Trans_TentangKami');
     }
 };

@@ -38,7 +38,7 @@ class TransUsersController extends Controller
 
 
        $users = new trans_users();
-       $users->Email = htmlspecialchars($validateData['Email'], ENT_QUOTES, 'UTF-8');
+       $users->Email = $validateData['Email'];
        $users->Nama = htmlspecialchars($validateData['Username'], ENT_QUOTES, 'UTF-8'); 
        $users->Password = $validateData['Password']; 
 

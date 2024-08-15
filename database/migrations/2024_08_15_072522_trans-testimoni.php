@@ -11,7 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('Trans_Testimoni', function (Blueprint $table) {
+           $table->id();
+           $table->string('Judul_Halaman');
+           $table->integer('Testimoni'); 
+        });
     }
 
     /**
@@ -19,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('Trans_Testimoni');
     }
 };

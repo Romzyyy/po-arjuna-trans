@@ -5,16 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class trans_testimoni extends Model
+class trans_tentangkami extends Model
 {
     use HasFactory;
-    
-    protected $table = 'Trans_Testimoni';
+    protected $table = 'Trans_Tentangkami';
     public $timestamps = true;
 
     protected $fillable = [
-        'Judul_Halaman',
-        'Testimoni'
+        'Email',
+        'Sub_Judul',
+        'Alamat',
+        'Wa',
+        'Telpon',
     ];
-
 }

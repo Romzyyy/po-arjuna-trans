@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\trans_trip;
+use Illuminate\Validation\Rule;
+
 
 class TransTripController extends Controller
 {
@@ -23,7 +25,7 @@ class TransTripController extends Controller
     public function store(Request $request){
         $validateData = $request->validate([
             'Judul_Halaman' => 'required|string|max:255',
-            'Wa' => ['required', 'regex:/^\+62[0-9]{9,11}$/'],
+            'Wa' => ['required', 'regex:/^\+62[0-9]{9,11}$/','string', 'unique:trans_trip,Wa'],
             'Jadwal_Trip' => 'required|date',
         ]);
         $validateData['Wa'] = preg_replace('/^\+62/', '0', $validateData['Wa']);
@@ -41,22 +43,31 @@ class TransTripController extends Controller
     public function update(Request $request, $id){
         $validateData = $request->validate([
             'Judul_Halaman' => 'required|string|max:255',
-            'Wa' => ['required', 'regex:/^\+62[0-9]{9,11}$/'],
+            'Wa' => [
+                'required',
+                'regex:/^\+62[0-9]{9,11}$/',
+                'string',
+                // Mengabaikan pengecekan duplikat untuk ID yang sedang diperbarui
+                Rule::unique('trans_trip', 'Wa')->ignore($id)
+            ],
             'Jadwal_Trip' => 'required|date',
         ]);
-
+    
         $trip = trans_trip::find($id);
         if(!$trip){
             return response()->json(['message' => 'Data Tidak Ditemukan'], 404);
         }
+        
         $validateData['Wa'] = preg_replace('/^\+62/', '0', $validateData['Wa']);
-
+    
         $trip->Judul_Halaman = htmlspecialchars($validateData['Judul_Halaman'], ENT_QUOTES, 'UTF-8');
         $trip->Wa = $validateData['Wa'];
         $trip->Jadwal_Trip = $validateData['Jadwal_Trip'];
         $trip->save();
+        
         return response()->json(['success' => 'Data Berhasil Diupdate']);
     }
+    
 
     public function destroy($id){
         $trip = trans_trip::find($id);
