@@ -1,40 +1,27 @@
 <!doctype html>
 <html lang="en" class="semi-dark">
 
-
-<!-- Mirrored from codervent.com/rukada/demo/vertical/ltr/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Aug 2024 06:30:56 GMT -->
-
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--favicon-->
-    <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
-    <!--plugins-->
-    <link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
-    <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
-    <link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
-    <!-- loader-->
-    <link href="assets/css/pace.min.css" rel="stylesheet" />
-    <script src="assets/js/pace.min.js"></script>
-    <!-- Bootstrap CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-extended.css" rel="stylesheet">
-    <link href="../../../../../fonts.googleapis.com/css276c7.css?family=Roboto:wght@400;500&amp;display=swap"
-        rel="stylesheet">
-    <link href="assets/css/app.css" rel="stylesheet">
-    <link href="assets/css/icons.css" rel="stylesheet">
-    <!-- Theme Style CSS -->
-    <link rel="stylesheet" href="assets/css/dark-theme.css" />
-    <link rel="stylesheet" href="assets/css/semi-dark.css" />
-    <link rel="stylesheet" href="assets/css/header-colors.css" />
-    <title>Rukada - Responsive Bootstrap 5 Admin Template</title>
+    <link rel="icon" href="{{ asset('assets/images/logo/arjuna-logo.png') }}" type="image/png" />
+    <link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet" />
+    <script src="{{ asset('assets/js/pace.min.js') }}"></script>
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap-extended.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/dark-theme.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/semi-dark.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/header-colors.css') }}" />
+    <title>Admin Arjuna Trans</title>
 </head>
 
 <body>
-    <!--wrapper-->
     <div class="wrapper">
-        <!--sidebar wrapper -->
         <div class="sidebar-wrapper" data-simplebar="true">
             <div class="sidebar-header">
                 <div>
@@ -46,7 +33,6 @@
                 <div class="toggle-icon ms-auto"><i class='bx bx-arrow-back'></i>
                 </div>
             </div>
-            <!--navigation-->
             <ul class="metismenu" id="menu">
                 <li>
                     <a href="/admin">
@@ -91,10 +77,7 @@
                     </a>
                 </li>
             </ul>
-            <!--end navigation-->
         </div>
-        <!--end sidebar wrapper -->
-        <!--start header -->
         <header>
             <div class="topbar d-flex align-items-center">
                 <nav class="navbar navbar-expand gap-3">
@@ -119,141 +102,6 @@
                                     href="#" data-bs-toggle="dropdown"><span class="alert-count">7</span>
                                     <i class='bx bx-bell'></i>
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-end">
-                                    <a href="javascript:;">
-                                        <div class="msg-header">
-                                            <p class="msg-header-title">Notifications</p>
-                                            <p class="msg-header-badge">8 New</p>
-                                        </div>
-                                    </a>
-                                    <div class="header-notifications-list">
-                                        <a class="dropdown-item" href="javascript:;">
-                                            <div class="d-flex align-items-center">
-                                                <div class="user-online">
-                                                    <img src="assets/images/avatars/avatar-1.png" class="msg-avatar"
-                                                        alt="user avatar">
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <h6 class="msg-name">Daisy Anderson<span
-                                                            class="msg-time float-end">5 sec
-                                                            ago</span></h6>
-                                                    <p class="msg-info">The standard chunk of lorem</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="dropdown-item" href="javascript:;">
-                                            <div class="d-flex align-items-center">
-                                                <div class="notify bg-light-danger text-danger">dc
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <h6 class="msg-name">New Orders <span class="msg-time float-end">2
-                                                            min
-                                                            ago</span></h6>
-                                                    <p class="msg-info">You have recived new orders</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="dropdown-item" href="javascript:;">
-                                            <div class="d-flex align-items-center">
-                                                <div class="user-online">
-                                                    <img src="assets/images/avatars/avatar-2.png" class="msg-avatar"
-                                                        alt="user avatar">
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <h6 class="msg-name">Althea Cabardo <span
-                                                            class="msg-time float-end">14
-                                                            sec ago</span></h6>
-                                                    <p class="msg-info">Many desktop publishing packages</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="dropdown-item" href="javascript:;">
-                                            <div class="d-flex align-items-center">
-                                                <div class="notify bg-light-success text-success">
-                                                    <img src="assets/images/app/outlook.png" width="25"
-                                                        alt="user avatar">
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <h6 class="msg-name">Account Created<span
-                                                            class="msg-time float-end">28 min
-                                                            ago</span></h6>
-                                                    <p class="msg-info">Successfully created new email</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="dropdown-item" href="javascript:;">
-                                            <div class="d-flex align-items-center">
-                                                <div class="notify bg-light-info text-info">Ss
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <h6 class="msg-name">New Product Approved <span
-                                                            class="msg-time float-end">2 hrs ago</span></h6>
-                                                    <p class="msg-info">Your new product has approved</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="dropdown-item" href="javascript:;">
-                                            <div class="d-flex align-items-center">
-                                                <div class="user-online">
-                                                    <img src="assets/images/avatars/avatar-4.png" class="msg-avatar"
-                                                        alt="user avatar">
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <h6 class="msg-name">Katherine Pechon <span
-                                                            class="msg-time float-end">15
-                                                            min ago</span></h6>
-                                                    <p class="msg-info">Making this the first true generator</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="dropdown-item" href="javascript:;">
-                                            <div class="d-flex align-items-center">
-                                                <div class="notify bg-light-success text-success"><i
-                                                        class='bx bx-check-square'></i>
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <h6 class="msg-name">Your item is shipped <span
-                                                            class="msg-time float-end">5 hrs
-                                                            ago</span></h6>
-                                                    <p class="msg-info">Successfully shipped your item</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="dropdown-item" href="javascript:;">
-                                            <div class="d-flex align-items-center">
-                                                <div class="notify bg-light-primary">
-                                                    <img src="assets/images/app/github.png" width="25"
-                                                        alt="user avatar">
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <h6 class="msg-name">New 24 authors<span
-                                                            class="msg-time float-end">1 day
-                                                            ago</span></h6>
-                                                    <p class="msg-info">24 new authors joined last week</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="dropdown-item" href="javascript:;">
-                                            <div class="d-flex align-items-center">
-                                                <div class="user-online">
-                                                    <img src="assets/images/avatars/avatar-8.png" class="msg-avatar"
-                                                        alt="user avatar">
-                                                </div>
-                                                <div class="flex-grow-1">
-                                                    <h6 class="msg-name">Peter Costanzo <span
-                                                            class="msg-time float-end">6 hrs
-                                                            ago</span></h6>
-                                                    <p class="msg-info">It was popularised in the 1960s</p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <a href="javascript:;">
-                                        <div class="text-center msg-footer">
-                                            <button class="btn btn-primary w-100">View All Notifications</button>
-                                        </div>
-                                    </a>
-                                </div>
                             </li>
                         </ul>
                     </div>
@@ -270,41 +118,21 @@
                 </nav>
             </div>
         </header>
-        <!--end header -->
-        <!--start page wrapper -->
         @yield('content')
-        <!--end page wrapper -->
-        <!--start overlay-->
         <div class="overlay toggle-icon"></div>
-        <!--end overlay-->
-        <!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i
-                class='bx bxs-up-arrow-alt'></i></a>
-        <!--End Back To Top Button-->
+
+        <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
         <footer class="page-footer">
             <p class="mb-0">Copyright © 2023. All right reserved.</p>
         </footer>
     </div>
-    <!--start switcher-->
-    <!--end switcher-->
-    <!-- Bootstrap JS -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <!--plugins-->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
-    <script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
-    <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-    <script src="assets/plugins/peity/jquery.peity.min.js"></script>
-    <script src="assets/plugins/chartjs/js/chart.js"></script>
-    <!--app JS-->
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/index2.js"></script>
-    <script>
-        new PerfectScrollbar('.product-list');
-        new PerfectScrollbar('.customers-list');
-    </script>
+    <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/simplebar/js/simplebar.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/peity/jquery.peity.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/chartjs/js/chart.js') }}"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
 </body>
-
-
-<!-- Mirrored from codervent.com/rukada/demo/vertical/ltr/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 05 Aug 2024 06:33:37 GMT -->
 
 </html>

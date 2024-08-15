@@ -21,11 +21,9 @@
     <link href="{{ asset('assets/style.css') }}" rel="stylesheet">
     <link href="{{ asset('style.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" />
-    @vite([asset('resources/js/app.js')])
 </head>
 
 <body id="body">
-
     <div class="preloader">
         <div class="preloader-container">
             <span class="preloader-text">Logtra</span>
