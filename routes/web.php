@@ -7,6 +7,7 @@ use App\Http\Controllers\TransTripController;
 use App\Http\Controllers\TransShortVideoController;
 use App\Http\Controllers\TransTestimoniController;
 use App\Http\Controllers\TransTentangkamiController;
+use App\Http\Controllers\TransHomeController;
 
 
 Route::get('/', function () {
@@ -77,3 +78,6 @@ Route::get('/TestimoniTrans', [TransTestimoniController::class, 'index'])->name(
 
 //json tentang kami
 Route::get('/TentangkamiTrans', [TransTentangkamiController::class, 'index'])->name('TentangkamiTrans');
+
+//json Home
+Route::get('/HomeTrans', [TransHomeController::class, 'index'])->name('HomeTrans');
