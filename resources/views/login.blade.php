@@ -86,7 +86,7 @@
 
 
 
-                                    <button type="submit" class="btn w-100 p-3 fs-4 fw-semibold text-white btn-gradient">
+                                    <button type="submit" class="btn w-100 p-3 fs-4 fw-semibold text-white btn-login">
                                         Masuk
                                     </button>
                                 </form>

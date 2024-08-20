@@ -65,7 +65,8 @@
     --clr-bg: #f7f7f7;
     --clr-bg-2: #f6f6f6;
     --clr-bg-3: #eef3f9;
-    --clr-def: #ea1e00;
+    --clr-def: #ff0000;
+    --clr-btn-contact: #96e25b;
     --clr-def-2: #000671;
     --clr-def-3: #01054c;
     --clr-menu: #ff4a17;
@@ -1321,7 +1322,7 @@ label {
     font-size: 16px;
     font-weight: 700;
     padding: 2.5rem 5.5rem;
-    background-color: var(--clr-def);
+    background-color: var(--clr-btn-contact);
     color: var(--clr-white);
     border-radius: 5px;
     border: none;
@@ -1433,7 +1434,7 @@ label {
 }
 
 .btn-md {
-    padding: 2rem 5.4rem;
+    padding: 0.5rem 2.4rem;
 }
 
 .btn-sm {
