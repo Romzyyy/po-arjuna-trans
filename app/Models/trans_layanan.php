@@ -10,7 +10,7 @@ class trans_layanan extends Model
     use HasFactory;
 
     protected $table = 'Trans_Layanan';
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = [
         'Judul_Halaman',

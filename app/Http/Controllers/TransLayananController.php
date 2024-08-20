@@ -18,6 +18,8 @@ class TransLayananController extends Controller
                 'Judul' => $layanan->Judul_Halaman,
                 'Deskripsi' => $layanan->Keterangan_Umum,
                 'Phone' => $layanan->Wa,
+                'Total' => $layanan->Total_Pelanggan,
+                'TotalTerlayani' => $layanan->Total_Pelanggan_Terlayani,
                 'GambarSampul' => $layanan->Gambar,
                 'GambarIsian' => $layanan->Gambar1,
                 'GambarDetail' => $layanan->Gambar2
@@ -26,39 +28,55 @@ class TransLayananController extends Controller
         return response()->json($formattedData);
     }
 
-    public function store(Request $request){
+    public function store(Request $request) {
         $validateData = $request->validate([
             'Judul_Halaman' => 'required|string|max:255',
             'Keterangan_Umum' => 'nullable|string',
             'Wa' => ['required', 'regex:/^\+62[0-9]{9,11}$/'],
+            'Total_Pelanggan' => 'required|integer|min:0',
+            'Total_Pelanggan_Terlayani' => 'required|integer|min:0',
             'Gambar' => 'required|image|mimes:jpeg,png,jpg|max:1024',
             'Gambar1' => 'required|image|mimes:jpeg,png,jpg|max:1024',
             'Gambar2' => 'required|image|mimes:jpeg,png,jpg|max:1024',
         ]);
-
+    
         $validateData['Wa'] = preg_replace('/^\+62/', '0', $validateData['Wa']);
-
+    
         $folderName = Str::slug($validateData['Judul_Halaman'], '-');
-        $folderPath = 'assets/upload/'. $folderName;
-        // Storage::disk('public')->makeDirectory($folderPath);
-
-        $validateData['Gambar'] = $request->file('Gambar')->store($folderPath, 'public');
-        $validateData['Gambar1'] = $request->file('Gambar1')->store($folderPath, 'public');
-        $validateData['Gambar2'] = $request->file('Gambar2')->store($folderPath, 'public');
-        
-
+        $folderPath = public_path('assets/upload/' . $folderName);
+    
+        // Buat folder jika belum ada
+        if (!file_exists($folderPath)) {
+            mkdir($folderPath, 0755, true);
+        }
+    
+        // Simpan file ke folder yang ditentukan
+        $gambar = $request->file('Gambar');
+        $gambar1 = $request->file('Gambar1');
+        $gambar2 = $request->file('Gambar2');
+    
+        $validateData['Gambar'] = $gambar->getClientOriginalName();
+        $validateData['Gambar1'] = $gambar1->getClientOriginalName();
+        $validateData['Gambar2'] = $gambar2->getClientOriginalName();
+    
+        $gambar->move($folderPath, $validateData['Gambar']);
+        $gambar1->move($folderPath, $validateData['Gambar1']);
+        $gambar2->move($folderPath, $validateData['Gambar2']);
+    
         $layanan = new trans_layanan();
         $layanan->Judul_Halaman = htmlspecialchars($validateData['Judul_Halaman'], ENT_QUOTES, 'UTF-8');
         $layanan->Keterangan_Umum = htmlspecialchars($validateData['Keterangan_Umum'], ENT_QUOTES, 'UTF-8');
         $layanan->Wa = $validateData['Wa'];
+        $layanan->Total_Pelanggan = htmlspecialchars($validateData['Total_Pelanggan'], ENT_QUOTES, 'UTF-8');
+        $layanan->Total_Pelanggan_Terlayani = htmlspecialchars($validateData['Total_Pelanggan_Terlayani'], ENT_QUOTES, 'UTF-8');
         $layanan->Gambar = $validateData['Gambar'];
         $layanan->Gambar1 = $validateData['Gambar1'];
         $layanan->Gambar2 = $validateData['Gambar2'];
         $layanan->save();
-
+    
         return response()->json(['success' => 'Data berhasil disimpan']);
-      
     }
+    
     
     public function update(Request $request, $id) {
         // Validasi input
@@ -66,6 +84,8 @@ class TransLayananController extends Controller
             'Judul_Halaman' => 'required|string|max:255',
             'Keterangan_Umum' => 'nullable|string',
             'Wa' => ['required', 'regex:/^\+62[0-9]{9,11}$/'],
+            'Total_Pelanggan' => 'required|integer|min:0',
+            'Total_Pelanggan_Terlayani' => 'required|integer|min:0',
             'Gambar' => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
             'Gambar1' => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
             'Gambar2' => 'nullable|image|mimes:jpeg,png,jpg|max:1024',
@@ -125,6 +145,8 @@ class TransLayananController extends Controller
         $layan->Judul_Halaman = $validateData['Judul_Halaman'];
         $layan->Keterangan_Umum = $validateData['Keterangan_Umum'];
         $layan->Wa = $validateData['Wa'];
+        $layan->Total_Pelanggan = $validateData['Total_Pelanggan'];
+        $layan->Total_Pelanggan_Terlayani = $validateData['Total_Pelanggan_Terlayani'];
         $layan->Gambar = $validateData['Gambar'];
         $layan->Gambar1 = $validateData['Gambar1'];
         $layan->Gambar2 = $validateData['Gambar2'];

@@ -56,12 +56,14 @@ Route::get('/pengaturan-tentang-kami', function () {
     return view('admin.pengaturan_tentang_kami');
 });
 
+
 //json users
-Route::get('/usersTrans', [TransUsersController::class, 'index'])->name('usersTrans');
+Route::get('/UsersTrans', [TransUsersController::class, 'index'])->name('usersTrans');
 
 
 //json layanan
 Route::get('/LayananTrans', [TransLayananController::class, 'index'])->name('LayananTrans');
+Route::post('/pengaturan-paket-layanan', [TransLayananController::class, 'store'])->name('layanan.store');
 
 
 //json trip
