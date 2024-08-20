@@ -55,11 +55,6 @@ Route::get('/pengaturan-tentang-kami', function () {
     return view('admin.pengaturan_tentang_kami');
 });
 
-// Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
 //json users
 Route::get('/usersTrans', [TransUsersController::class, 'index'])->name('usersTrans');
 

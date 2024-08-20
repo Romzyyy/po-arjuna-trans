@@ -4,14 +4,18 @@
     <div class="card">
         <div class="card-body p-4">
             <h5 class="mb-4">Pengaturan Tentang Kami</h5>
-            <form class="row g-3">
+            <form class="row g-3" action="{{ route('TentangkamiTrans') }}" method="POST">
+                @csrf
+                @method('PUT')
                 <div class="col-md-12">
                     <label for="input1" class="form-label">Sub Judul</label>
-                    <input type="text" class="form-control" id="input1" placeholder="First Name">
+                    <input type="text" class="form-control" id="input1" placeholder="Judul"
+                        value="{{ $tentangkami->sub_judul }}">
                 </div>
                 <div class="col-md-12">
                     <label for="input2" class="form-label">Alamat Lengkap</label>
-                    <input type="text" class="form-control" id="input2" placeholder="Last Name">
+                    <input type="text" class="form-control" id="input2" placeholder="Alamat lengkap"
+                        value="{{ $tentangKami->alamat }}">
                 </div>
 
                 <div class="col-md-12">
@@ -25,15 +29,18 @@
                 </div>
                 <div class="col-md-4">
                     <label for="input2" class="form-label">No. Telepon</label>
-                    <input type="text" class="form-control" id="input2" placeholder="Last Name">
+                    <input type="text" class="form-control" id="input2" placeholder="Telepon"
+                        value="{{ $tentangKami->no_telepon }}">
                 </div>
                 <div class="col-md-4">
                     <label for="input2" class="form-label">No. Whatsapp</label>
-                    <input type="text" class="form-control" id="input2" placeholder="Last Name">
+                    <input type="text" class="form-control" id="input2" placeholder="Whatsapp"
+                        value="{{ $tentangKami->no_whatsapp }}">
                 </div>
                 <div class="col-md-4">
                     <label for="input2" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="input2" placeholder="Last Name">
+                    <input type="text" class="form-control" id="input2" placeholder="Email"
+                        value="{{ $tentangKami->email }}">
                 </div>
             </form>
         </div>
