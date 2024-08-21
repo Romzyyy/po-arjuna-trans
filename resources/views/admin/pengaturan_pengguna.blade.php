@@ -22,8 +22,8 @@
             </form>
         </div>
         <div class="card-body p-4">
-            <button class="btn btn-primary">Submit</button>
-            <button type="reset" class="btn btn-secondary">Reset</button>
+            <button type="reset" class="btn btn-secondary">Batalkan</button>
+            <button class="btn btn-success">Simpan</button>
         </div>
     </div>
 @endsection
