@@ -31,16 +31,16 @@ window.TambahLayanan = function () {
     let Gambar1 = $("#gambar1")[0].files[0];
     let Gambar2 = $("#gambar2")[0].files[0];
 
-    console.log(
-        Judul,
-        Keterangan,
-        Wa,
-        Total,
-        TotalTerlayani,
-        Gambar,
-        Gambar1,
-        Gambar2
-    );
+    // console.log(
+    //     Judul,
+    //     Keterangan,
+    //     Wa,
+    //     Total,
+    //     TotalTerlayani,
+    //     Gambar,
+    //     Gambar1,
+    //     Gambar2
+    // );
 
     let formData = new FormData();
     formData.append("Judul_Halaman", Judul);
@@ -54,7 +54,7 @@ window.TambahLayanan = function () {
     formData.append("_token", $('meta[name="csrf-token"]').attr("content"));
 
     $.ajax({
-        url: "",
+        url: "/pengaturan-paket-layanan",
         type: "POST",
         data: formData,
         processData: false,

@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('Trans_Home', function(Blueprint $table){
+        Schema::create('Paket_Layanan', function(Blueprint $table){
             $table->id();
-            $table->string('Nama_Travel');
-            $table->string('Slogan');
-            $table->string('Wa');
-            $table->string('Logo');
-            $table->string('Home');
+            $table->string('Nama_Layanan');
+            $table->string('Gambar');
+            $table->string('Keterangan');
         });
     }
 
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('Trans_Home');
+        Schema::dropIfExists('Paket-Layanan');
     }
 };
