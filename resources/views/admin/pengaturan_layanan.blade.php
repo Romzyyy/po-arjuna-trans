@@ -45,4 +45,6 @@
             <button type="reset" class="btn btn-secondary">Reset</button>
         </div>
     </div>
+
+    @vite('resources/js/TransLayanan.js')
 @endsection

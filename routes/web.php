@@ -8,7 +8,7 @@ use App\Http\Controllers\TransShortVideoController;
 use App\Http\Controllers\TransTestimoniController;
 use App\Http\Controllers\TransTentangkamiController;
 use App\Http\Controllers\TransHomeController;
-
+use App\Http\Controllers\PaketLayananController;
 
 Route::get('/', function () {
     return view('index');
@@ -57,11 +57,18 @@ Route::get('/pengaturan-tentang-kami', function () {
 });
 
 
-//json users
+//json paket-layanan
+Route::get('/PaketLayanan', [PaketLayananController::class, 'index'])->name('PaketLayanan');
+Route::post('/paket-layanan', [PaketLayananController::class, 'store'])->name('layanan.store');
+Route::delete('/PaketLayanan/{id}', [PaketLayananController::class, 'destroy']);
+
+
+
+//json pengaturan-users
 Route::get('/UsersTrans', [TransUsersController::class, 'index'])->name('usersTrans');
 
 
-//json layanan
+//json pengaturan-layanan
 Route::get('/LayananTrans', [TransLayananController::class, 'index'])->name('LayananTrans');
 Route::post('/pengaturan-paket-layanan', [TransLayananController::class, 'store'])->name('layanan.store');
 
@@ -70,16 +77,16 @@ Route::post('/pengaturan-paket-layanan', [TransLayananController::class, 'store'
 Route::get('/TripTrans', [TransTripController::class, 'index'])->name('TripTrans');
 
 
-//json short video
+//json pengaturan short video
 Route::get('/ShortVideoTrans', [TransShortVideoController::class, 'index'])->name('ShortVideoTrans');
 
 
-//json short video
+//json  pengaturan tetstimoni
 Route::get('/TestimoniTrans', [TransTestimoniController::class, 'index'])->name('TestimoniTrans');
 
 
-//json tentang kami
+//json pengaturan tentang kami
 Route::get('/TentangkamiTrans', [TransTentangkamiController::class, 'index'])->name('TentangkamiTrans');
 
-//json Home
+//json  pengaturan Home
 Route::get('/HomeTrans', [TransHomeController::class, 'index'])->name('HomeTrans');

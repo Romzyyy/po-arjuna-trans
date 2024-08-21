@@ -18,7 +18,7 @@
                             <label for="input1" class="form-label">Nama Trip</label>
                             <input type="text" class="form-control" id="judul_halaman" placeholder="First Name">
                         </div>
-                        <div class="mb-4">
+                        <div class="col-md-4">
                             <label for="formFile" class="form-label">Upload gambar poster</label>
                             <input class="form-control" type="file" id="formFile">
                         </div>
