@@ -79,9 +79,12 @@ function GetPaketLayanan(data){
 
 window.deletePaketLayanan = function (id) {
     $.ajax({
-        url: `/layanan/${id}`,
+        url: `/PaketLayanan/${id}`,
         type: 'DELETE',
         dataType: 'json',
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
         success: function (response) {
             console.log(response);
 
