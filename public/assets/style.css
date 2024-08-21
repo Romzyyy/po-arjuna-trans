@@ -32231,8 +32231,8 @@ readers do not read off random characters that represent icons */
         left center/cover no-repeat;
 }
 .container {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .navbar-brand {
     left: 15px;
@@ -32276,19 +32276,13 @@ readers do not read off random characters that represent icons */
 
 .gradient {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    height: 100vh;
+    height: 120%;
     background: linear-gradient(
         to top right,
         rgba(234, 97, 97, 0.2),
         rgba(139, 80, 232, 0.3)
     );
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     z-index: 10;
 }
 

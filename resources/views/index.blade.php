@@ -90,7 +90,7 @@
                                     </li>
                                 </ul>
                                 <div class="search-cart nav-profile">
-                                    <a href="contact.html" class="btn-1 btn-md"
+                                    <a href="contact.html" class="btn-1 btn-sm"
                                         style="width: 21rem; margin: 10px; padding: 2px">
                                         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48"
                                             height="48" viewBox="0 0 48 48">
@@ -155,7 +155,7 @@
                                             tempor incididunt ut labore et dolore magna aliqua. Ut enim
                                         </p>
                                         <div class="hero-btn">
-                                            <a href="contact.html" class="btn-1 btn-md mr-30">
+                                            <a href="contact.html" class="btn-1 btn-sm mr-30">
                                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48"
                                                     height="48" viewBox="0 0 48 48">
                                                     <path fill="#fff"
@@ -286,7 +286,7 @@
                                 Kemana anda akan berkunjung? sendiri? Atau dengan rombongan? Hubungi kami, segera kami
                                 jadwalkan
                             </p>
-                            <a href="contact.html" class="btn-1 btn-md">
+                            <a href="contact.html" class="btn-1 btn-sm">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48"
                                     viewBox="0 0 48 48">
                                     <path fill="#fff"
@@ -581,7 +581,7 @@
                     </div>
                 </div>
             </div>
-            <div class="d-flex flex-row justify-content-center mb-5">
+            <div class="d-flex flex-row justify-content-center mb-5 pb-5">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination pagination-lg d-flex flex-row justify-content-center">
                         <li class="page-item disabled">

@@ -67,6 +67,7 @@
     --clr-bg-3: #eef3f9;
     --clr-def: #ff0000;
     --clr-btn-contact: #96e25b;
+    --clr-btn-contact-hov: #54a019;
     --clr-def-2: #000671;
     --clr-def-3: #01054c;
     --clr-menu: #ff4a17;
@@ -1334,7 +1335,7 @@ label {
     margin-left: 1rem;
 }
 .btn-1:hover {
-    background-color: var(--clr-def-2);
+    background-color: var(--clr-btn-contact-hov);
     color: var(--clr-white);
 }
 
@@ -1434,11 +1435,11 @@ label {
 }
 
 .btn-md {
-    padding: 0.5rem 2.4rem;
+    padding: 1.5rem 3.5rem;
 }
 
 .btn-sm {
-    padding: 1.5rem 3.5rem;
+    padding: 0.5rem 2.4rem;
 }
 
 .btn-second {

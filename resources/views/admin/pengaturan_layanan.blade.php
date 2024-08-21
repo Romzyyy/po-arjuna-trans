@@ -2,7 +2,7 @@
 
 @section('pengaturan')
     <div class="card">
-        <meta name="csrf-token" content="{{ csrf_token() }}">        
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <div class="card-body p-4">
             <h5 class="mb-4">Pengaturan Paket Layanan</h5>
             <form class="row g-3">
@@ -45,7 +45,4 @@
             <button type="reset" class="btn btn-secondary">Reset</button>
         </div>
     </div>
-
-    @vite('resources/js/TransLayanan.js')
-
 @endsection

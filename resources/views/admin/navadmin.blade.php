@@ -16,8 +16,7 @@
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col-lg-3 col-xl-2">
-                                    <a href="ecommerce-add-new-products.html" class="btn btn-primary mb-3 mb-lg-0"><i
-                                            class='bx bxs-plus-square'></i>Tambah Baru</a>
+                                    @yield('modal-content')
                                 </div>
                                 <div class="col-lg-9 col-xl-10">
                                     <form class="float-lg-end">
