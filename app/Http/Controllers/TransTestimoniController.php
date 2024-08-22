@@ -22,7 +22,7 @@ class TransTestimoniController extends Controller
     public function store(Request $request){
         $validateData = $request->validate([
             'Judul_Halaman' => 'required|string|max:255',
-            'Testimoni' => 'required|interger|min:0|max:100',
+            'Testimoni' => 'required|integer|min:0|max:100',
         ]);
 
         $tesmon = new trans_testimoni();

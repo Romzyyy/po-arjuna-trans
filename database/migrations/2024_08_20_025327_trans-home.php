@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('Trans_Home', function(Blueprint $table){
             $table->id();
             $table->string('Nama_Travel');
+            $table->string('Nama_Travel1');
             $table->string('Slogan');
             $table->string('Wa');
             $table->string('Logo');

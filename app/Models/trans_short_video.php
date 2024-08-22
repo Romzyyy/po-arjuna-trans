@@ -10,7 +10,7 @@ class trans_short_video extends Model
     use HasFactory;
 
     protected $table = 'Trans_Short_Video';
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = [
        'Judul_Halaman',

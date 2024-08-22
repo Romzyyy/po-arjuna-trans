@@ -56,6 +56,7 @@ window.TambahLayanan = function () {
     $.ajax({
         url: "/pengaturan-paket-layanan",
         type: "POST",
+        dataType: "json",
         data: formData,
         processData: false,
         contentType: false,

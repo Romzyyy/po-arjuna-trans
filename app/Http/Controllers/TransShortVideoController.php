@@ -31,7 +31,7 @@ class TransShortVideoController extends Controller
             'Instagram' => 'required|string',
             'Tiktok' => 'required|string',
             'Facebook' => 'required|string',
-            'Short_Video' => 'required|interger|min:0|max:100',
+            'Short_Video' => 'required|integer|min:0|max:100',
         ]);
         
         $short_video = new trans_short_video();

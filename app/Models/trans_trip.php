@@ -10,7 +10,7 @@ class trans_trip extends Model
     use HasFactory;
 
     protected $table = 'Trans_Trip';
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = [
         'Judul_Halaman',

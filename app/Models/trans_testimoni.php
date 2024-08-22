@@ -10,7 +10,7 @@ class trans_testimoni extends Model
     use HasFactory;
     
     protected $table = 'Trans_Testimoni';
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = [
         'Judul_Halaman',

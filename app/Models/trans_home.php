@@ -10,10 +10,11 @@ class trans_home extends Model
     use HasFactory;
 
     protected $table = 'Trans_Home';
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = [
         'Nama_Travel',
+        'Nama_Travel1',
         'Slogan',
         'Wa',
         'Logo',

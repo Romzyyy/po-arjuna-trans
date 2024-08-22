@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('Trans_Trip', function (Blueprint $table) {
             $table->id();
             $table->string('Judul_Halaman');
-            $table->string('Wa')->uniqid();
+            $table->string('Wa')->unique();
             $table->date('Jadwal_Trip');
         });
     }

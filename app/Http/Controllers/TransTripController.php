@@ -25,20 +25,33 @@ class TransTripController extends Controller
     public function store(Request $request){
         $validateData = $request->validate([
             'Judul_Halaman' => 'required|string|max:255',
-            'Wa' => ['required', 'regex:/^\+62[0-9]{9,11}$/','string', 'unique:trans_trip,Wa'],
+            'Wa' => [
+                'required', 
+                'regex:/^\+62[0-9]{9,11}$/',
+                'string', 
+                'unique:Trans_Trip,Wa',
+                function($attribute, $value, $fail) {
+                    $digits = strlen(preg_replace('/^\+62/', '', $value));
+                    if ($digits < 9 || ($digits > 11 && $digits != 12)) {
+                        $fail('Nomor WhatsApp harus antara 9 sampai 12 digit setelah kode negara +62.');
+                    }
+                }
+            ],
             'Jadwal_Trip' => 'required|date',
         ]);
-        $validateData['Wa'] = preg_replace('/^\+62/', '0', $validateData['Wa']);
+    
 
+        $validateData['Wa'] = preg_replace('/^\+62/', '0', $validateData['Wa']);
+    
         $trip = new trans_trip();
         $trip->Judul_Halaman = htmlspecialchars($validateData['Judul_Halaman'], ENT_QUOTES, 'UTF-8');
         $trip->Wa = $validateData['Wa'];
         $trip->Jadwal_Trip = $validateData['Jadwal_Trip'];
         $trip->save();
-
+    
         return response()->json(['success' => 'Data Berhasil Ditambahkan']);
-
     }
+    
 
     public function update(Request $request, $id){
         $validateData = $request->validate([
@@ -48,7 +61,7 @@ class TransTripController extends Controller
                 'regex:/^\+62[0-9]{9,11}$/',
                 'string',
 
-                Rule::unique('trans_trip', 'Wa')->ignore($id)
+                Rule::unique('Trans_Trip', 'Wa')->ignore($id)
             ],
             'Jadwal_Trip' => 'required|date',
         ]);

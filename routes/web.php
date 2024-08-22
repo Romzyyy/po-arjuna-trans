@@ -75,18 +75,20 @@ Route::post('/pengaturan-paket-layanan', [TransLayananController::class, 'store'
 
 //json trip
 Route::get('/TripTrans', [TransTripController::class, 'index'])->name('TripTrans');
-
+Route::post('/pengaturan-jadwal-trip', [TransTripController::class, 'store'])->name('trip.store');
 
 //json pengaturan short video
 Route::get('/ShortVideoTrans', [TransShortVideoController::class, 'index'])->name('ShortVideoTrans');
-
+Route::post('/pengaturan-short-video', [TransShortVideoController::class, 'store'])->name('shortvideo.store');
 
 //json  pengaturan tetstimoni
 Route::get('/TestimoniTrans', [TransTestimoniController::class, 'index'])->name('TestimoniTrans');
-
+Route::post('/pengaturan-testimonial', [TransTestimoniController::class, 'store'])->name('testimoni.store');
 
 //json pengaturan tentang kami
 Route::get('/TentangkamiTrans', [TransTentangkamiController::class, 'index'])->name('TentangkamiTrans');
+Route::post('/pengaturan-tentang-kami', [TransTentangkamiController::class, 'store'])->name('tentangkami.store');
 
 //json  pengaturan Home
 Route::get('/HomeTrans', [TransHomeController::class, 'index'])->name('HomeTrans');
+Route::post('/pengaturan-home', [TransHomeController::class, 'store'])->name('home.store');

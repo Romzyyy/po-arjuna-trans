@@ -15,7 +15,7 @@ return new class extends Migration
            $table->id();
            $table->string('Judul_Halaman');
            $table->text('Keterangan_Umum');
-           $table->string('Wa')->uniqid();
+           $table->string('Wa')->unique();
            $table->integer('Total_Pelanggan');
            $table->integer('Total_Pelanggan_Terlayani');
            $table->string('Gambar');

@@ -32,7 +32,18 @@ class TransLayananController extends Controller
         $validateData = $request->validate([
             'Judul_Halaman' => 'required|string|max:255',
             'Keterangan_Umum' => 'nullable|string',
-            'Wa' => ['required', 'regex:/^\+62[0-9]{9,11}$/'],
+            'Wa' => [
+                'required',
+                'regex:/^\+62[0-9]{9,11}$/',
+                'string',
+                'unique:Trans_Layanan,Wa',
+                function($attribute, $value, $fail) {
+                    $digits = strlen(preg_replace('/^\+62/', '', $value));
+                    if ($digits < 9 || ($digits > 11 && $digits != 12)) {
+                        $fail('Nomor WhatsApp harus antara 9 sampai 12 digit setelah kode negara +62.');
+                    }
+                }
+            ],
             'Total_Pelanggan' => 'required|integer|min:0',
             'Total_Pelanggan_Terlayani' => 'required|integer|min:0',
             'Gambar' => 'required|image|mimes:jpeg,png,jpg|max:1024',
@@ -51,17 +62,13 @@ class TransLayananController extends Controller
         }
     
         // Simpan file ke folder yang ditentukan
-        $gambar = $request->file('Gambar');
-        $gambar1 = $request->file('Gambar1');
-        $gambar2 = $request->file('Gambar2');
+        $gambar = $request->file('Gambar')->hashName();
+        $gambar1 = $request->file('Gambar1')->hashName();
+        $gambar2 = $request->file('Gambar2')->hashName();
     
-        $validateData['Gambar'] = $gambar->getClientOriginalName();
-        $validateData['Gambar1'] = $gambar1->getClientOriginalName();
-        $validateData['Gambar2'] = $gambar2->getClientOriginalName();
-    
-        $gambar->move($folderPath, $validateData['Gambar']);
-        $gambar1->move($folderPath, $validateData['Gambar1']);
-        $gambar2->move($folderPath, $validateData['Gambar2']);
+        $request->file('Gambar')->move($folderPath, $gambar);
+        $request->file('Gambar1')->move($folderPath, $gambar1);
+        $request->file('Gambar2')->move($folderPath, $gambar2);
     
         $layanan = new trans_layanan();
         $layanan->Judul_Halaman = htmlspecialchars($validateData['Judul_Halaman'], ENT_QUOTES, 'UTF-8');
@@ -69,14 +76,15 @@ class TransLayananController extends Controller
         $layanan->Wa = $validateData['Wa'];
         $layanan->Total_Pelanggan = htmlspecialchars($validateData['Total_Pelanggan'], ENT_QUOTES, 'UTF-8');
         $layanan->Total_Pelanggan_Terlayani = htmlspecialchars($validateData['Total_Pelanggan_Terlayani'], ENT_QUOTES, 'UTF-8');
-        $layanan->Gambar = $validateData['Gambar'];
-        $layanan->Gambar1 = $validateData['Gambar1'];
-        $layanan->Gambar2 = $validateData['Gambar2'];
+        $layanan->Gambar = $gambar;
+        $layanan->Gambar1 = $gambar1;
+        $layanan->Gambar2 = $gambar2;
         $layanan->save();
     
         return response()->json(['success' => 'Data berhasil disimpan']);
     }
     
+
     
     public function update(Request $request, $id) {
         // Validasi input

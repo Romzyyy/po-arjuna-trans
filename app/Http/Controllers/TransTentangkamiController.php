@@ -25,8 +25,30 @@ class TransTentangkamiController extends Controller
         $validateData = $request->validate([
             'Email' => 'required|string|email|max:255',
             'Sub_Judul' => 'required|string|max:255',
-            'Wa' => ['required', 'regex:/^\+62[0-9]{9,11}$/','string'],
-            'Telpon' => ['required', 'regex:/^\+62[0-9]{9,11}$/','string'],
+            'Alamat' => 'required|string|max:255',
+            'Wa' => [
+                'required',
+                'regex:/^\+62[0-9]{9,11}$/',
+                'string',
+                'unique:Trans_Tentangkami,Wa',
+                function($attribute, $value, $fail) {
+                    $digits = strlen(preg_replace('/^\+62/', '', $value));
+                    if ($digits < 9 || ($digits > 11 && $digits != 12)) {
+                        $fail('Nomor WhatsApp harus antara 9 sampai 12 digit setelah kode negara +62.');
+                    }
+                }
+            ],
+            'Telpon' => ['required',
+            'regex:/^\+62[0-9]{9,11}$/',
+            'string',
+            'unique:Trans_Tentangkami,Telpon',
+            function($attribute, $value, $fail) {
+                $digits = strlen(preg_replace('/^\+62/', '', $value));
+                if ($digits < 9 || ($digits > 11 && $digits != 12)) {
+                    $fail('Nomor WhatsApp harus antara 9 sampai 12 digit setelah kode negara +62.');
+                }
+            }
+        ]
         ]);
 
         $validateData['Wa'] = preg_replace('/^\+62/', '0', $validateData['Wa']);
@@ -35,6 +57,7 @@ class TransTentangkamiController extends Controller
         $tentangKami = new trans_tentangkami();
         $tentangKami->Email = $validateData['Email'];
         $tentangKami->Sub_Judul = htmlspecialchars($validateData['Sub_Judul'], ENT_QUOTES, 'UTF-8');
+        $tentangKami->Alamat = htmlspecialchars($validateData['Alamat'], ENT_QUOTES, 'UTF-8');
         $tentangKami->Wa = $validateData['Wa'];
         $tentangKami->Telpon = $validateData['Telpon'];
 
@@ -58,6 +81,7 @@ class TransTentangkamiController extends Controller
 
         $tentangKami->Email = $validateData['Email'];
         $tentangKami->Sub_Judul = htmlspecialchars($validateData['Sub_Judul'], ENT_QUOTES, 'UTF-8');
+        $tentangKami->Alamat = htmlspecialchars($validateData['Alamat'], ENT_QUOTES, 'UTF-8');
         $tentangKami->Wa = $validateData['Wa'];
         $tentangKami->Telpon = $validateData['Telpon'];
         $tentangKami->save();

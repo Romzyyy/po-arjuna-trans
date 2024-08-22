@@ -2,16 +2,17 @@
 
 @section('pengaturan')
     <div class="card">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <div class="card-body p-4">
             <h5 class="mb-4">Pengaturan Tentang Kami</h5>
-            <form class="row g-3" action="#">
+            <form class="row g-3">
                 <div class="col-md-12">
                     <label for="input1" class="form-label">Sub Judul</label>
-                    <input type="text" class="form-control" id="input1" placeholder="Judul" value="#">
+                    <input type="text" class="form-control" id="SubJudul" placeholder="Judul">
                 </div>
                 <div class="col-md-12">
                     <label for="input2" class="form-label">Alamat Lengkap</label>
-                    <input type="text" class="form-control" id="input2" placeholder="Alamat lengkap" value="#">
+                    <input type="text" class="form-control" id="AlamatLengkap" placeholder="Alamat lengkap">
                 </div>
 
                 <div class="col-md-12">
@@ -25,21 +26,23 @@
                 </div>
                 <div class="col-md-4">
                     <label for="input2" class="form-label">No. Telepon</label>
-                    <input type="text" class="form-control" id="input2" placeholder="Telepon" value="#">
+                    <input type="text" class="form-control" id="Telpon" placeholder="Telepon">
                 </div>
                 <div class="col-md-4">
                     <label for="input2" class="form-label">No. Whatsapp</label>
-                    <input type="text" class="form-control" id="input2" placeholder="Whatsapp" value="#">
+                    <input type="text" class="form-control" id="Wa" placeholder="Whatsapp">
                 </div>
                 <div class="col-md-4">
                     <label for="input2" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="input2" placeholder="Email" value="#">
+                    <input type="text" class="form-control" id="Email" placeholder="Email">
                 </div>
             </form>
         </div>
         <div class="card-body p-4">
             <button type="reset" class="btn btn-secondary">Batalkan</button>
-            <button class="btn btn-success">Simpan</button>
+            <button class="btn btn-success" onclick="TambahTentangKami()">Simpan</button>
         </div>
     </div>
+
+    @vite('resources/js/TransTentangkami.js')
 @endsection

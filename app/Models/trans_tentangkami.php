@@ -9,7 +9,7 @@ class trans_tentangkami extends Model
 {
     use HasFactory;
     protected $table = 'Trans_Tentangkami';
-    public $timestamps = true;
+    public $timestamps = false;
 
     protected $fillable = [
         'Email',

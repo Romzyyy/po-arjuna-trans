@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('Trans_Tentangkami', function (Blueprint $table) {
             $table->id();
-            $table->string('Email')->uniqid();
+            $table->string('Email')->unique();
             $table->string('Sub_Judul');
             $table->string('Alamat');
-            $table->string('Wa');
-            $table->string('Telpon');
+            $table->string('Wa')->unique();
+            $table->string('Telpon')->unique();
 
         });
     }

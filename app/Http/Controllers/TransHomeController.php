@@ -24,37 +24,65 @@ class TransHomeController extends Controller
         return response()->json($formattedData);
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
+       
         $validateData = $request->validate([
             'Nama_Travel' => 'required|string|max:255',
+            'Nama_Travel1' => 'required|string|max:255',
             'Slogan' => 'required|string|max:255',
-            'Wa' => ['required', 'regex:/^\+62[0-9]{9,11}$/'],
+            'Wa' => [
+                'required',
+                'regex:/^\+62[0-9]{9,11}$/',
+                'string',
+                'unique:Trans_Home,Wa',
+                function($attribute, $value, $fail) {
+                    $digits = strlen(preg_replace('/^\+62/', '', $value));
+                    if ($digits < 9 || ($digits > 11 && $digits != 12)) {
+                        $fail('Nomor WhatsApp harus antara 9 sampai 12 digit setelah kode negara +62.');
+                    }
+                }
+            ],
             'Logo' => 'required|image|mimes:jpeg,png,jpg|max:1024',
             'Home' => 'required|image|mimes:jpeg,png,jpg|max:1024',
         ]);
+    
 
         $validateData['Wa'] = preg_replace('/^\+62/', '0', $validateData['Wa']);
-
+    
         $folderName = Str::slug($validateData['Nama_Travel'], '-');
-        $folderPath = 'assets/upload/travel/'. $folderName;
+        $folderPath = public_path('assets/upload/travel/' . $folderName);
+    
+        if (!file_exists($folderPath)) {
+            mkdir($folderPath, 0755, true);
+        }
+    
 
-        $validateData ['Logo'] = $request->file('Logo')->store($folderPath);
-        $validateData ['Home'] = $request->file('Home')->store($folderPath);
+        $logoFileName = $request->file('Logo')->hashName();
+        $homeFileName = $request->file('Home')->hashName();
+        
 
+        $request->file('Logo')->move($folderPath, $logoFileName);
+        $request->file('Home')->move($folderPath, $homeFileName);
+    
+       
         $home = new trans_home();
         $home->Nama_Travel = htmlspecialchars($validateData['Nama_Travel'], ENT_QUOTES, 'UTF-8');
+        $home->Nama_Travel1 = htmlspecialchars($validateData['Nama_Travel1'], ENT_QUOTES, 'UTF-8');
         $home->Slogan = htmlspecialchars($validateData['Slogan'], ENT_QUOTES, 'UTF-8');
         $home->Wa = $validateData['Wa'];
-        $home->Logo = $validateData['Logo'];
-        $home->Home = $validateData['Home'];
+        $home->Logo = $logoFileName;  
+        $home->Home = $homeFileName;   
         $home->save();
-
+    
         return response()->json(['success' => 'Data berhasil disimpan']);
     }
+    
 
     public function update(Request $request, $id){
         $validateData = $request->validate([
             'Nama_Travel' => 'required|string|max:255',
+            'Nama_Travel1' => 'required|string|max:255',
             'Slogan' => 'required|string|max:255',
             'Wa' => ['required', 'regex:/^\+62[0-9]{9,11}$/'],
             'Logo' => 'required|image|mimes:jpeg,png,jpg|max:1024',
@@ -98,6 +126,7 @@ class TransHomeController extends Controller
         }
 
         $home->Nama_Travel = $validateData['Nama_Travel'];
+        $home->Nama_Travel1 = $validateData['Nama_Travel1'];
         $home->Slogan = $validateData['Slogan'];
         $home->Wa = $validateData['Wa'];
         $home->Logo = $validateData['Logo'];
